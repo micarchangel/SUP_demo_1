@@ -1,42 +1,54 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Pause : MonoBehaviour
 {
-    public GameObject panel;
-    public AudioMixer am;
-    public int VolCoeff = 30;
+    [SerializeField] private GameObject pausePanel;
+    [SerializeField] private Button pauseUIButton;
+    [SerializeField] private AudioMixer am;
+    [SerializeField] private int VolCoeff = 30;
+    private bool escapeMenu;
+
     
 
     public void Start()
     {
+        escapeMenu = false;
+        pausePanel.gameObject.SetActive(false);
         QualitySettings.SetQualityLevel(3);
     }
 
     public void Update()
     {
-        if (panel.activeSelf)
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
-            GameObject.FindGameObjectWithTag("Player").GetComponent<PersController>().EscapeMenu = true;
-        }
-        else if (!panel.activeSelf)
-        {
-            GameObject.FindGameObjectWithTag("Player").GetComponent<PersController>().EscapeMenu = false;
+            if (!escapeMenu)
+            {
+                pausePanel.SetActive(true);
+                pauseUIButton.gameObject.SetActive(false);
+                escapeMenu = true;
+                Time.timeScale = 0f;
+            }
+            else
+            {
+                pausePanel.SetActive(false);
+                pauseUIButton.gameObject.SetActive(true);
+                escapeMenu = false;
+                Time.timeScale = 1f;
+            }
         }
     }
 
     public void MyPause()
     {
-        panel.SetActive(true);
+        pausePanel.SetActive(true);
         Time.timeScale = 0f;
     }
 
     public void MyPlay() { 
-        panel.SetActive(false);
+        pausePanel.SetActive(false);
         Time.timeScale = 1f;
     }
 

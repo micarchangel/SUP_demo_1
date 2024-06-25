@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.UI;
 
 public class PersController : MonoBehaviour
 {
@@ -8,15 +7,12 @@ public class PersController : MonoBehaviour
     Vector3 direction;
     CharacterController controller;
 
-    public bool EscapeMenu;
-    public GameObject escape;
-    public Button pause;
+
 
 
     void Awake()
     {
         controller = GetComponent<CharacterController>();
-        escape.gameObject.SetActive(false);
     }
 
     void Update()
@@ -28,22 +24,5 @@ public class PersController : MonoBehaviour
 
         controller.Move(direction * Time.deltaTime);
 
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            if (!EscapeMenu)
-            {
-                escape.SetActive(true);
-                pause.gameObject.SetActive(false);
-                EscapeMenu = true;
-                Time.timeScale = 0f;
-            }
-            else
-            {
-                escape.SetActive(false);
-                pause.gameObject.SetActive(true);
-                EscapeMenu = false;
-                Time.timeScale = 1f;
-            }
-        }
     }
 }
