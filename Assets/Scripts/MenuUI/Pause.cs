@@ -11,13 +11,16 @@ public class Pause : MonoBehaviour
     [SerializeField] private int VolCoeff = 30;
     private bool escapeMenu;
 
-    
 
     public void Start()
     {
+        var globalSettings = Resources.Load<GlobalParameters>("");
+        am.SetFloat("masterVolume", globalSettings.userVolumeLevel);
+        QualitySettings.SetQualityLevel(globalSettings.userQualityLevel);
+
         escapeMenu = false;
         pausePanel.gameObject.SetActive(false);
-        QualitySettings.SetQualityLevel(3);
+        //QualitySettings.SetQualityLevel(3);
     }
 
     public void Update()

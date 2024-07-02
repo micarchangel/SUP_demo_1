@@ -10,7 +10,7 @@ public class Settings : MonoBehaviour
 
     public void Start()
     {
-        QualitySettings.SetQualityLevel(3);
+        //QualitySettings.SetQualityLevel(3);
     }    
 
     public void FullScreenToggle()
