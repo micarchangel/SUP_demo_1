@@ -11,16 +11,14 @@ public class Pause : MonoBehaviour
     [SerializeField] private int VolCoeff = 30;
     private bool escapeMenu;
 
-    
-
-    public void Start()
+    private void Start()
     {
         escapeMenu = false;
         pausePanel.gameObject.SetActive(false);
         QualitySettings.SetQualityLevel(3);
     }
 
-    public void Update()
+    private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
@@ -52,7 +50,7 @@ public class Pause : MonoBehaviour
         Time.timeScale = 1f;
     }
 
-    public void toMainMenu() {
+    public void ToMainMenu() {
         SceneManager.LoadScene("Menu");
     }
 
