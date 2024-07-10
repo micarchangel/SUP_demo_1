@@ -33,7 +33,7 @@ public class PersRBController : MonoBehaviour
     private void FixedUpdate()
     {
         playerMovement();
-        Debug.Log(rb.velocity + "_____" + v + "____" + direction);
+        //Debug.Log(rb.velocity + "_____" + v + "____" + direction);
     }
 
     private void playerMovement()
