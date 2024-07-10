@@ -12,5 +12,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb6a56a78217b564b8369fabd4de90b3, type: 3}
   m_Name: GlobalParameters
   m_EditorClassIdentifier: 
-  userQualityLevel: 3
-  userVolumeLevel: 1
