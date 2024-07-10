@@ -20,6 +20,11 @@ public class GameSettings : MonoBehaviour
         Debug.Log(lvl);
     }
 
+    public void FullScreenToggle()
+    {
+        Screen.fullScreen = !Screen.fullScreen;
+    }
+
     public void AudioVolume(float sliderValue)
     {
         am.SetFloat("masterVolume", Mathf.Log10(sliderValue) * VolCoeff);
