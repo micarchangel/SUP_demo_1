@@ -1,37 +1,46 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
 using UnityEngine.UI;
 
 public class GameSettings : MonoBehaviour
 {
-    public static GameSettings instance;
+    [SerializeField] private Slider slider;
+    [SerializeField] private float audioVolume;
     [SerializeField] private AudioMixer am;
-    [SerializeField] private int VolCoeff = 30;
-    [SerializeField] private Slider audioVolume;
-
-    private void Update()
-    {
-        audioVolume = GetComponent<Slider>();
-        float lvl;
-        am.GetFloat("masterVolume", out lvl);
-        lvl = Mathf.Pow(10, lvl / VolCoeff);
-        Debug.Log(lvl);
-    }
 
     public void FullScreenToggle()
     {
         Screen.fullScreen = !Screen.fullScreen;
     }
 
-    public void AudioVolume(float sliderValue)
+    public void SaveSliderValue()
     {
-        am.SetFloat("masterVolume", Mathf.Log10(sliderValue) * VolCoeff);
+        // Сохраняем значение слайдера в PlayerPrefs
+        PlayerPrefs.SetFloat("SliderValue", slider.value);
+        Debug.Log("saved " + audioVolume);
     }
+
+    //public void OnSceneChange(Scene scene, LoadSceneMode mode)
+    //{
+    //    // Сохраняем значение слайдера перед переходом к другой сцене
+    //    SaveSliderValue();
+    //}
 
     public void Quality(int q)
     {
         QualitySettings.SetQualityLevel(q);
+    }
+
+    void OnEnable()
+    {
+        audioVolume = PlayerPrefs.GetFloat("SliderValue");
+        slider.value = audioVolume;
+        Debug.Log("Loaded " + audioVolume);
+    }
+
+    void OnDisable()
+    {
+        SaveSliderValue();
     }
 }

@@ -2791,6 +2791,7 @@ GameObject:
   - component: {fileID: 1223538403}
   - component: {fileID: 1223538407}
   - component: {fileID: 1223538408}
+  - component: {fileID: 1223538409}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -2897,7 +2898,6 @@ MonoBehaviour:
   pausePanel: {fileID: 685791765}
   pauseUIButton: {fileID: 1820826499}
   am: {fileID: 24100000, guid: 19ccb066a4098b4459467274addce0ba, type: 2}
-  VolCoeff: 50
 --- !u!82 &1223538408
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2905,7 +2905,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1223538402}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24300002, guid: 19ccb066a4098b4459467274addce0ba, type: 2}
   m_audioClip: {fileID: 8300000, guid: c2019908ab6e8da40967400b32d7c5fd, type: 3}
@@ -2994,6 +2994,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1223538409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1223538402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63233cde249b0ff49b9b732a872aef4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slider: {fileID: 1708135805}
+  audioVolume: 1
+  am: {fileID: 24100000, guid: 19ccb066a4098b4459467274addce0ba, type: 2}
 --- !u!1 &1299817899
 GameObject:
   m_ObjectHideFlags: 0
