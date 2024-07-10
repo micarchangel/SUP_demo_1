@@ -10,25 +10,6 @@ public class GameSettings : MonoBehaviour
     [SerializeField] private AudioMixer am;
     [SerializeField] private int VolCoeff = 30;
     [SerializeField] private Slider audioVolume;
-    [SerializeField] private int videoQuality;
-
-    //private void Awake()
-    //{
-    //    if (!instance)
-    //    {
-    //        instance = this;
-    //        DontDestroyOnLoad(audioVolume);
-    //    } else
-    //    {
-    //        Destroy(audioVolume);
-    //    }
-    //}
-
-    //private void OnLevelWasLoaded(int level)
-    //{
-    //    audioVolume = GameObject.FindGameObjectWithTag("AudioSlider").GetComponent<Slider>();
-    //    Debug.Log(audioVolume.ToString());
-    //}
 
     private void Update()
     {
@@ -36,7 +17,6 @@ public class GameSettings : MonoBehaviour
         float lvl;
         am.GetFloat("masterVolume", out lvl);
         lvl = Mathf.Pow(10, lvl / VolCoeff);
-        //audioVolume.value = lvl;
         Debug.Log(lvl);
     }
 
