@@ -537,8 +537,8 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1223538407}
-        m_TargetAssemblyTypeName: Pause, Assembly-CSharp
+      - m_Target: {fileID: 1223538409}
+        m_TargetAssemblyTypeName: GameSettings, Assembly-CSharp
         m_MethodName: Quality
         m_Mode: 0
         m_Arguments:
@@ -3009,6 +3009,7 @@ MonoBehaviour:
   slider: {fileID: 1708135805}
   audioVolume: 1
   am: {fileID: 24100000, guid: 19ccb066a4098b4459467274addce0ba, type: 2}
+  VolCoeff: 30
 --- !u!1 &1299817899
 GameObject:
   m_ObjectHideFlags: 0
@@ -4101,19 +4102,7 @@ MonoBehaviour:
   m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1223538407}
-        m_TargetAssemblyTypeName: Pause, Assembly-CSharp
-        m_MethodName: AudioVolume
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &1754975473
 GameObject:
   m_ObjectHideFlags: 0
