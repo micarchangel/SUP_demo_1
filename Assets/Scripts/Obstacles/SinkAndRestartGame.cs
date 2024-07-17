@@ -21,7 +21,7 @@ public class SinkAndRestartGame : MonoBehaviour
         Vector3 originalPosition = player.transform.position;
         while (elapsedTime < 3.0f) // Погружаем игрока за 3 секунды
         {
-            player.transform.position = originalPosition - Vector3.up * sinkingSpeed * Time.deltaTime;
+            player.transform.position = originalPosition - Vector3.up * sinkingSpeed * elapsedTime; // уменьшаем позицию игрока по оси Y
             elapsedTime += Time.deltaTime;
             yield return null;
         }
