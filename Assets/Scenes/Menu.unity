@@ -2983,6 +2983,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63233cde249b0ff49b9b732a872aef4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  qualityValue: {fileID: 0}
   audioVolume: 0
   slider: {fileID: 178589894}
   am: {fileID: 24100000, guid: 19ccb066a4098b4459467274addce0ba, type: 2}
