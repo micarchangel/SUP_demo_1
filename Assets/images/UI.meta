@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/images/UI.meta
 guid: ba6fea5420e764c4eb32414b6d9fff44
+========
+guid: b5e521915fb3ece47b9eb1de64610dd1
+>>>>>>>> SergT1:Assets/Animation.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
