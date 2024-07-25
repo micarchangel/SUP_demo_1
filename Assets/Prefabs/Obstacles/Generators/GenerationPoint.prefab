@@ -13,7 +13,7 @@ GameObject:
   m_Layer: 0
   m_Name: GenerationPoint
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -45,8 +45,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectsToGenerate:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 540969035182839274, guid: b6341617b3df76a4c9e8a04513fcafc2, type: 3}
+  - {fileID: 6657112215201483406, guid: a07d8b66e50fd6547b6bbb38223b5589, type: 3}
+  - {fileID: 4446653626904894107, guid: fee4b781f9b4aea45a14883c0413a2bb, type: 3}
+  - {fileID: 1451135981601902316, guid: 8fa535c44b0ca734c9a8bf1e0a87bec8, type: 3}
+  - {fileID: 9183612672558672978, guid: 122c1950f69a58646a251ee92a02cd35, type: 3}
+  - {fileID: 2978412905944789803, guid: 047db169406023f43ae327a015874c2f, type: 3}

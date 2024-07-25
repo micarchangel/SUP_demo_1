@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FloatingBox : MonoBehaviour
 {
-    public float speed = 1.0f; // Скорость движения ящика
+    public float speed = 0.3f; // Скорость движения ящика
     public float changeDirectionTime = 2.0f; // Время до смены направления
 
     private Vector3 direction; // Текущее направление движения
