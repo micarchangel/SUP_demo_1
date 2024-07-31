@@ -10,7 +10,7 @@ public class Settings : MonoBehaviour
 
     public void Start()
     {
-        QualitySettings.SetQualityLevel(3);
+        //QualitySettings.SetQualityLevel(3);
     }    
 
     public void FullScreenToggle()
@@ -18,12 +18,12 @@ public class Settings : MonoBehaviour
         Screen.fullScreen = !Screen.fullScreen;
     }
 
-    public void AudioVolume(float sliderValue) {
-        am.SetFloat("masterVolume", Mathf.Log10(sliderValue) * VolCoeff);
-    }
+    //public void AudioVolume(float sliderValue) {
+    //    am.SetFloat("masterVolume", Mathf.Log10(sliderValue) * VolCoeff);
+    //}
 
-    public void Quality(int q)
-    {
-        QualitySettings.SetQualityLevel(q);
-    }
+    //public void Quality(int q)
+    //{
+    //    QualitySettings.SetQualityLevel(q);
+    //}
 }

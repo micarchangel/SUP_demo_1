@@ -14,9 +14,10 @@ GameObject:
   - component: {fileID: 4764427524962263231}
   - component: {fileID: -7150952577578104840}
   - component: {fileID: -5504777764861740978}
+  - component: {fileID: -5815894776558859043}
   m_Layer: 0
   m_Name: FisherBoat
-  m_TagString: Ship
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -132,8 +133,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sinkingSpeed: 2
-<<<<<<< Updated upstream
-=======
 --- !u!114 &-5815894776558859043
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -146,8 +145,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27a457a1250df394dae22b5b198dc38a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyDistanceBehind: 1
->>>>>>> Stashed changes
+  player: {fileID: 0}
+  destroyDistanceBehind: 20
 --- !u!1001 &57278183255182667
 PrefabInstance:
   m_ObjectHideFlags: 0

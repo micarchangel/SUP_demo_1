@@ -178,6 +178,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -1853094968961178454, guid: 95676b62e86918147ad772ac09029247, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 95676b62e86918147ad772ac09029247, type: 3}
       propertyPath: m_Name
       value: bottle

@@ -5,7 +5,7 @@ using UnityEngine;
 public class ObjectDestroyer : MonoBehaviour
 {
     public Transform player;
-    public float destroyDistanceBehind = 2.0f;
+    public float destroyDistanceBehind = 20.0f;
 
     void Update()
     {

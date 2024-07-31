@@ -7,10 +7,12 @@ public class ShipAndJetSkiGenerator : MonoBehaviour
     public GameObject[] shipsAndJetSkis; // Массив с префабами корабликов и гидроциклов
     public float spawnInterval = 5.0f; // Интервал между генерацией
 
-    private float waterWidth = 93.44813f;
-    private float waterLength = 766.1378f;
-    private float waterPosX = 0.293f;
-    private float waterPosZ = -449.75f;
+    private float waterWidth = 30.0f; // Примерная ширина реки
+    private float waterLengthStart = 28.93f; // Начальная позиция по Z
+    private float waterLengthEnd = -750.0f; // Конечная позиция по Z
+    private float waterPosX = 0.0f; // Позиция центра реки по X
+    public Transform player;
+    public float destroyDistanceBehind = 20.0f; // Расстояние позади игрока, после которого лодки уничтожаются
 
     void Start()
     {
@@ -38,10 +40,13 @@ public class ShipAndJetSkiGenerator : MonoBehaviour
             Vector3 randomPosition = new Vector3(
                 Random.Range(waterPosX - waterWidth / 2, waterPosX + waterWidth / 2), // Ширина реки
                 12.5f, // Высота (на уровне воды)
-                Random.Range(waterPosZ - waterLength / 2, waterPosZ + waterLength / 2) // Длина реки
+                Random.Range(waterLengthStart, waterLengthEnd) // Длина реки
             );
 
-            Instantiate(selectedObject, randomPosition, Quaternion.identity);
+            GameObject newShip = Instantiate(selectedObject, randomPosition, Quaternion.identity);
+            var destroyer = newShip.AddComponent<ObjectDestroyer>();
+            destroyer.player = player;
+            destroyer.destroyDistanceBehind = destroyDistanceBehind;
         }
     }
 }

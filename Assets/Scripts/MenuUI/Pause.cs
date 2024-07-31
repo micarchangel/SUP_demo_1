@@ -2,23 +2,25 @@ using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using System.Collections.Generic;
 
 public class Pause : MonoBehaviour
 {
     [SerializeField] private GameObject pausePanel;
     [SerializeField] private Button pauseUIButton;
     [SerializeField] private AudioMixer am;
-    [SerializeField] private int VolCoeff = 30;
+    //[SerializeField] private int VolCoeff = 30;
     private bool escapeMenu;
 
-    private void Start()
+
+    public void Start()
     {
         escapeMenu = false;
         pausePanel.gameObject.SetActive(false);
-        QualitySettings.SetQualityLevel(3);
+        //QualitySettings.SetQualityLevel(3);
     }
 
-    private void Update()
+    public void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
@@ -50,17 +52,17 @@ public class Pause : MonoBehaviour
         Time.timeScale = 1f;
     }
 
-    public void ToMainMenu() {
+    public void toMainMenu() {
         SceneManager.LoadScene("Menu");
     }
 
-    public void AudioVolume(float sliderValue)
-    {
-        am.SetFloat("masterVolume", Mathf.Log10(sliderValue) * VolCoeff);
-    }
+    //public void AudioVolume(float sliderValue)
+    //{
+    //    am.SetFloat("masterVolume", Mathf.Log10(sliderValue) * VolCoeff);
+    //}
 
-    public void Quality(int q)
-    {
-        QualitySettings.SetQualityLevel(q);
-    }
+    //public void Quality(int q)
+    //{
+    //    QualitySettings.SetQualityLevel(q);
+    //}
 }
