@@ -8,7 +8,7 @@ public class SinkAndRestartGame : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        Debug.Log("SinkAndRestartGame - OnTriggerEnter triggered with: " + other.gameObject.name);
+        //Debug.Log("SinkAndRestartGame - OnTriggerEnter triggered with: " + other.gameObject.name);
         if (other.CompareTag("Player"))
         {
             StartCoroutine(SinkAndRestart(other.gameObject));

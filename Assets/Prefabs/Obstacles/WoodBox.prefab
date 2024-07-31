@@ -148,7 +148,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _damage: 10
-  _score: 1
+  _score: 0
 --- !u!114 &-7075527833382851063
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -39,9 +39,9 @@ public class Score : MonoBehaviour
         score += Convert.ToInt32(n);
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if (collision.collider.TryGetComponent<Obstacle>(out var obstacle))
+        if (other.TryGetComponent<Obstacle>(out var obstacle))
         {
             score += obstacle.Score;
             //scoreChanged?.Invoke(obstacle.Score);
@@ -49,5 +49,4 @@ public class Score : MonoBehaviour
             Debug.Log("touch score");
         }
     }
-
 }
