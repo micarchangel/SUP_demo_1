@@ -4,12 +4,17 @@ using UnityEngine;
 
 public class ShipDestroyer : MonoBehaviour
 {
-    public Transform player;
-    public float destroyDistanceBehind = 20.0f;
+    private Camera camera;
+    [SerializeField] private float destroyDistanceBehind = 1.0f;
 
-    void Update()
-    {
-        if (player != null && transform.position.z < player.position.z - destroyDistanceBehind)
+  private void Start()
+  {
+    camera = Camera.main;
+  }
+    private void Update()
+    { 
+        Debug.Log(transform.position.z + " _ " + camera.transform.position.z);
+        if (camera != null && transform.position.z > camera.transform.position.z + destroyDistanceBehind)
         {
             Destroy(gameObject);
         }
