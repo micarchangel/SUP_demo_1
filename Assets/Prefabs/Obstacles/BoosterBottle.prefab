@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4115088647171852766}
   - component: {fileID: 3783358585184110905}
   - component: {fileID: 7743713862438204211}
+  - component: {fileID: 2157202371142905352}
   m_Layer: 0
   m_Name: BoosterBottle
   m_TagString: Untagged
@@ -83,7 +84,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 16
   m_CollisionDetection: 0
 --- !u!114 &7743713862438204211
 MonoBehaviour:
@@ -99,6 +100,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speedMultiplier: 2
   boostDuration: 5
+--- !u!114 &2157202371142905352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 540969035182839274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b524d027b553ae14988407c08b377f68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sinkDuration: 4
+  floatHeight: 2
 --- !u!1001 &7571091001326632449
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -168,7 +183,8 @@ PrefabInstance:
       value: bottle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 65702495048144492, guid: 95676b62e86918147ad772ac09029247, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 95676b62e86918147ad772ac09029247, type: 3}
