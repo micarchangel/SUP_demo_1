@@ -2261,12 +2261,13 @@ GameObject:
   m_Component:
   - component: {fileID: 354975795}
   - component: {fileID: 354975794}
-  - component: {fileID: 354975796}
   - component: {fileID: 354975798}
   - component: {fileID: 354975799}
+  - component: {fileID: 354975796}
   - component: {fileID: 354975800}
   - component: {fileID: 354975802}
   - component: {fileID: 354975801}
+  - component: {fileID: 354975805}
   - component: {fileID: 354975803}
   - component: {fileID: 354975804}
   m_Layer: 0
@@ -2407,7 +2408,19 @@ MonoBehaviour:
   _maxHP: 100
   Die:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 354975805}
+        m_TargetAssemblyTypeName: Sinking, Assembly-CSharp
+        m_MethodName: PlayerSink
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   HpChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -2496,8 +2509,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _player: {fileID: 354975792}
-  speedMultiplier: 2
-  boostDuration: 5
+  staminaLost: 0.4
+  staminaAdd: 0.1
+  speedMultiplier: 15
   _maxSP: 100
   SpChanged:
     m_PersistentCalls:
@@ -2517,6 +2531,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &354975805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 354975792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57168f758b3bf91418a513edcc650fa6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 354975792}
+  sinkingSpeed: 2
+  sinkDuration: 3
 --- !u!1001 &365882772
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3228,7 +3257,7 @@ GameObject:
   - component: {fileID: 504000976}
   - component: {fileID: 504000981}
   m_Layer: 0
-  m_Name: FinishLane
+  m_Name: FinishLine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3328,7 +3357,7 @@ Transform:
   m_GameObject: {fileID: 504000975}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0.17, y: 12.6, z: -91}
+  m_LocalPosition: {x: 0.17, y: 12.6, z: -762}
   m_LocalScale: {x: 3.93125, y: 1, z: 0.2375}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6478,13 +6507,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: 0c4ef236ee8b32244aeb0c859ba9e519, type: 3}
-  m_Type: 0
+  m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
-  m_FillMethod: 4
+  m_FillMethod: 0
   m_FillAmount: 1
   m_FillClockwise: 1
-  m_FillOrigin: 0
+  m_FillOrigin: 1
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
 --- !u!222 &1245415523

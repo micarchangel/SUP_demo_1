@@ -29,9 +29,18 @@ public class FloatingBox : MonoBehaviour
         direction = new Vector3(Random.Range(-1f, 1f), 0, Random.Range(-1f, 1f)).normalized;
     }
 
-    private void OnCollisionEnter(Collision collision)
+    //private void OnCollisionEnter(Collision collision)
+    //{
+    //    if (collision.collider.CompareTag("Player"))
+    //    {
+    //        // Ящик тонет при столкновении с игроком
+    //        StartCoroutine(SinkAndDestroy());
+    //    }
+    //}
+
+    private void OnTriggerEnter(Collider other)
     {
-        if (collision.collider.CompareTag("Player"))
+        if (other.CompareTag("Player"))
         {
             // Ящик тонет при столкновении с игроком
             StartCoroutine(SinkAndDestroy());
