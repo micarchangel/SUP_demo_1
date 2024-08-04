@@ -7,7 +7,7 @@ public class SinkBuoy : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("SinkBuoy - OnTriggerEnter triggered with: " + other.gameObject.name);
+        //Debug.Log("SinkBuoy - OnTriggerEnter triggered with: " + other.gameObject.name);
         if (other.CompareTag("Player"))
         {
             StartCoroutine(Sink());

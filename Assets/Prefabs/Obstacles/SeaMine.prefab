@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8161667387182185941}
   - component: {fileID: 358755060412616772}
   - component: {fileID: 8095397052672669617}
-  - component: {fileID: -4746493746302996011}
+  - component: {fileID: 542312992320899698}
   m_Layer: 0
   m_Name: SeaMine
   m_TagString: Enemy
@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionEffect: {fileID: 2913041281739135567, guid: 52f1dbe84c153b54d8900db5907f72de, type: 3}
---- !u!114 &-4746493746302996011
+--- !u!114 &542312992320899698
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -106,11 +106,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1451135981601902316}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b524d027b553ae14988407c08b377f68, type: 3}
+  m_Script: {fileID: 11500000, guid: f480b9342507ea243a62036e023dada5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sinkDuration: 4
-  floatHeight: 2
+  _damage: 100
+  _score: 0
 --- !u!1001 &2869170675714635819
 PrefabInstance:
   m_ObjectHideFlags: 0

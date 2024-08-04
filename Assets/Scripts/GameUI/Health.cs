@@ -20,6 +20,7 @@ public class Health : MonoBehaviour
             HpChanged?.Invoke(_currentHP);
             HpChangedPercent?.Invoke(_currentHP / _maxHP);
 
+
             if (_currentHP <= 0)
             {
                 Die?.Invoke();
@@ -40,6 +41,7 @@ public class Health : MonoBehaviour
     public void GetDamage(float damage)
     {
         HP -= damage;
+        Debug.Log("HP = " + HP);
     }
 
     public void AddHealth(float hp)

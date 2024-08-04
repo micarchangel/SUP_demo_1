@@ -7,7 +7,6 @@ using UnityEngine.Events;
 
 public class Score : MonoBehaviour
 {
-    //[SerializeField] private TMP_Text scoreText;
     [SerializeField] UnityEvent<int> scoreChanged;
     [SerializeField] UnityEvent<string> scoreChangedString;
     private int _currentScore;
@@ -44,9 +43,7 @@ public class Score : MonoBehaviour
         if (other.TryGetComponent<Obstacle>(out var obstacle))
         {
             score += obstacle.Score;
-            //scoreChanged?.Invoke(obstacle.Score);
-            //scoreChangedString?.Invoke("—чет: " + obstacle.Score.ToString());
-            Debug.Log("touch score");
+            //Debug.Log("touch score");
         }
     }
 }
