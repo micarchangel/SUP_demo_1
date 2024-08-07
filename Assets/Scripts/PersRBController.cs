@@ -18,6 +18,7 @@ public class PersRBController : MonoBehaviour
 
     private void Start()
     {
+        Time.timeScale = 1f;
         rb= GetComponent<Rigidbody>();
         supTransform= rb.GetComponent<Transform>();
         rb.drag = drag;
