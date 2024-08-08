@@ -98,10 +98,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionEffect: {fileID: 2913041281739135567, guid: 52f1dbe84c153b54d8900db5907f72de, type: 3}
-  explosionSound: {fileID: 8300000, guid: 9889858c04300e141a78cfad5e6af564, type: 3}
   explosionSource: {fileID: 5022680456447912349}
   seaMineMesh: {fileID: 3103048685735183738}
-  delay: 1
+  delay: 2
 --- !u!114 &542312992320899698
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -11,6 +11,8 @@ public class Stamina : MonoBehaviour
     [SerializeField] private float staminaAdd;
     [SerializeField] private float speedMultiplier = 2.0f; // Коэффициент увеличения скорости
     //[SerializeField] private float boostDuration = 5.0f;   // Длительность ускорения
+    [SerializeField] private float delay; // время задержки перед восполнением SP
+    //[SerializeField] private float _minSP = 0; // уровень СП при котором активируется задержка
     [SerializeField] private float _maxSP;
     [SerializeField] private UnityEvent<float> SpChanged;
     [SerializeField] private UnityEvent<float> SpChangedPercent;
@@ -20,7 +22,6 @@ public class Stamina : MonoBehaviour
     private Rigidbody _rb;
     private Vector3 _direction;
     private Transform _supTransform;
-    
 
     public float SP
     {
@@ -46,23 +47,24 @@ public class Stamina : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (Input.GetButton("Fire3") && 
-            (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W)) &&
-            SP > 0)
+        if ((Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W)) && SP > 0)
         {
-            //Debug.Log("Shift нфжфт");
-            _rb.AddForce(_direction * -speedMultiplier, ForceMode.Force);
-            LoseStamina(staminaLost);
+            StopAllCoroutines();
+            if (Input.GetButton("Fire3"))
+            {
+                //Debug.Log("Shift нажат");
+                _rb.AddForce(_direction * -speedMultiplier, ForceMode.Force);
+                LoseStamina(staminaLost);
+            }
         }
-        else if (SP < _maxSP)
+        else
         {
-            AddStamina(staminaAdd);
+            StartCoroutine(DelayCoroutine(delay));
         }
     }
 
     public void Init()
     {
-        
         SP = _maxSP;
     }
 
@@ -76,5 +78,12 @@ public class Stamina : MonoBehaviour
         SP += value;
     }
 
-
+    private IEnumerator DelayCoroutine(float delay)
+    {
+        if (SP < _maxSP)
+        {
+            yield return new WaitForSeconds(delay);
+            AddStamina(staminaAdd);
+        }
+    }
 }

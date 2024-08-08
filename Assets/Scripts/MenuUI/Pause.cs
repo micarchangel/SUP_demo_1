@@ -17,7 +17,6 @@ public class Pause : MonoBehaviour
     {
         escapeMenu = false;
         pausePanel.gameObject.SetActive(false);
-        //QualitySettings.SetQualityLevel(3);
     }
 
     public void Update()
@@ -44,11 +43,15 @@ public class Pause : MonoBehaviour
     public void MyPause()
     {
         pausePanel.SetActive(true);
+        pauseUIButton.gameObject.SetActive(false);
+        escapeMenu = true;
         Time.timeScale = 0f;
     }
 
     public void MyPlay() { 
         pausePanel.SetActive(false);
+        pauseUIButton.gameObject.SetActive(true);
+        escapeMenu = false;
         Time.timeScale = 1f;
     }
 
