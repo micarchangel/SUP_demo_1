@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class SinkAndFloat : MonoBehaviour
 {
-    public float sinkDuration = 4.0f; // время утопления-всплытия
-    public float floatHeight = 2.0f; // высота всплытия
+    public float sinkDuration = 4.0f; // Время утопления-всплытия
+    public float floatHeight = 2.0f; // Высота всплытия
 
     private Vector3 originalPosition;
     private bool isSinking = false;
@@ -15,9 +15,9 @@ public class SinkAndFloat : MonoBehaviour
         originalPosition = transform.position;
     }
 
-    void OnCollisionEnter(Collision collision)
+    void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.CompareTag("Ship"))
+        if (other.CompareTag("Ship") || other.CompareTag("JetSki"))
         {
             if (!isSinking)
             {
@@ -33,19 +33,19 @@ public class SinkAndFloat : MonoBehaviour
 
         float elapsedTime = 0;
 
-        while (elapsedTime < sinkDuration)
+        while (elapsedTime < sinkDuration / 2)
         {
-            transform.position = Vector3.Lerp(originalPosition, sinkPosition, (elapsedTime / sinkDuration));
+            transform.position = Vector3.Lerp(originalPosition, sinkPosition, (elapsedTime / (sinkDuration / 2)));
             elapsedTime += Time.deltaTime;
             yield return null;
         }
 
-        yield return new WaitForSeconds(2.0f);
+        yield return new WaitForSeconds(sinkDuration / 2);
 
         elapsedTime = 0;
-        while (elapsedTime < sinkDuration)
+        while (elapsedTime < sinkDuration / 2)
         {
-            transform.position = Vector3.Lerp(sinkPosition, originalPosition, (elapsedTime / sinkDuration));
+            transform.position = Vector3.Lerp(sinkPosition, originalPosition, (elapsedTime / (sinkDuration / 2)));
             elapsedTime += Time.deltaTime;
             yield return null;
         }

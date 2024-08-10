@@ -7,6 +7,13 @@ public class PersRBController : MonoBehaviour
 
     [SerializeField] private float turnSpeed = 0.1f;
     [SerializeField] private float speed = 15f;
+
+        public float Speed
+        {
+            get { return speed; }
+            set { speed = value; }
+        }   
+
     [SerializeField] private float drag = 1f;
 
     private Transform supTransform;

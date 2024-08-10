@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 358755060412616772}
   - component: {fileID: 8095397052672669617}
   - component: {fileID: 542312992320899698}
+  - component: {fileID: 8815133710147765309}
   m_Layer: 0
   m_Name: SeaMine
   m_TagString: Enemy
@@ -111,6 +112,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _damage: 100
   _score: 0
+--- !u!114 &8815133710147765309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1451135981601902316}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b524d027b553ae14988407c08b377f68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sinkDuration: 10
+  floatHeight: 2
 --- !u!1001 &2869170675714635819
 PrefabInstance:
   m_ObjectHideFlags: 0
