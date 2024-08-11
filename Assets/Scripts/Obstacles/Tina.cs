@@ -3,8 +3,11 @@ using UnityEngine;
 
 public class Tina : MonoBehaviour
 {
-    // Продолжительность замедления игрока в секундах
-    public float slowDownDuration = 5.0f;
+    //[SerializeField] private float slowDownDuration = 5.0f; // Продолжительность замедления игрока в секундах
+    [SerializeField] private float speedCoeff = 0.2f; // коэфф. скорости игрока
+    [SerializeField] private float sinkDuration = 4.0f; // время утопления-всплытия
+    [SerializeField] private float floatHeight = 2.0f; // высота всплытия
+    [SerializeField] private float floatDelay = 2.0f; // время задержки перед всплытием тины
 
     private void OnTriggerEnter(Collider other)
     {
@@ -14,7 +17,7 @@ public class Tina : MonoBehaviour
             PersRBController playerController = other.GetComponent<PersRBController>();
             if (playerController != null)
             {
-                playerController.Speed *= 0.2f; // Замедляем скорость на 80% (оставляем 20% от исходной)
+                playerController.Speed *= speedCoeff; // Замедляем скорость на 80% (оставляем 20% от исходной)
             }
         }
         else if (other.CompareTag("Ship") || other.CompareTag("JetSki"))
@@ -32,16 +35,13 @@ public class Tina : MonoBehaviour
             PersRBController playerController = other.GetComponent<PersRBController>();
             if (playerController != null)
             {
-                playerController.Speed /= 0.2f; // Восстанавливаем скорость до исходной
+                playerController.Speed /= speedCoeff; // Восстанавливаем скорость до исходной
             }
         }
     }
 
     private IEnumerator SinkAndFloat(GameObject obj)
     {
-        float sinkDuration = 4.0f; // время утопления-всплытия
-        float floatHeight = 2.0f; // высота всплытия
-
         Vector3 originalPosition = obj.transform.position;
         Vector3 sinkPosition = new Vector3(originalPosition.x, originalPosition.y - floatHeight, originalPosition.z);
 
@@ -54,7 +54,7 @@ public class Tina : MonoBehaviour
             yield return null;
         }
 
-        yield return new WaitForSeconds(2.0f);
+        yield return new WaitForSeconds(floatDelay);
 
         elapsedTime = 0;
         while (elapsedTime < sinkDuration)
