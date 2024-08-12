@@ -7,29 +7,34 @@ using TMPro;
 
 public class GameSettings : MonoBehaviour
 {
-    
-    [SerializeField] private TMP_Dropdown dropdown;
-    [SerializeField] private int qualityValue;
-    [SerializeField] private float audioVolume;
-    [SerializeField] private Slider slider;
-    [SerializeField] private AudioMixer am;
+    [SerializeField] private Toggle soundToggle;
+    [SerializeField] private TMP_Dropdown dropdown;    
+    [SerializeField] private Slider sliderMain;
+    [SerializeField] private Slider sliderMusic;
+    [SerializeField] private Slider sliderSound;
+    [SerializeField] private AudioMixer mainAM;
+    [SerializeField] private AudioMixer musicAM;
+    [SerializeField] private AudioMixer soundAM;
     [SerializeField] private int VolCoeff;
+
+    private float mainAudioVolume;
+    private float musicAudioVolume;
+    private float soundAudioVolume;
+    private int qualityValue;
 
     void Start()
     {
-        am.SetFloat("masterVolume", Mathf.Log10(audioVolume) * VolCoeff);
+        mainAM.SetFloat("masterVolume", Mathf.Log10(mainAudioVolume) * VolCoeff);
+        musicAM.SetFloat("musicVolume", Mathf.Log10(musicAudioVolume) * VolCoeff);
+        soundAM.SetFloat("soundVolume", Mathf.Log10(soundAudioVolume) * VolCoeff);
         QualitySettings.SetQualityLevel(qualityValue);
 
-        if (slider != null)
-        {
-            // Привязка функции к изменению значения слайдера
-            slider.onValueChanged.AddListener(AudioVolume);
-        }
+        // Привязка функции к изменению значения слайдера
+        sliderMain?.onValueChanged.AddListener(MainAudioVolume);
+        sliderMusic?.onValueChanged.AddListener(MusicAudioVolume);
+        sliderSound?.onValueChanged.AddListener(SoundAudioVolume);
 
-        if (dropdown != null)
-        {
-            dropdown.onValueChanged.AddListener(Quality);
-        }
+        dropdown?.onValueChanged.AddListener(Quality);
 
         //qualityValue.onValueChanged.AddListener(Quality);
     }
@@ -40,23 +45,31 @@ public class GameSettings : MonoBehaviour
         Debug.Log(Screen.fullScreen);
     }
 
-    public void SaveSliderValue()
+    public void SoundOnToggle()
     {
-        // Сохраняем значение слайдера в PlayerPrefs
-        PlayerPrefs.SetFloat("SliderValue", slider.value);
-        Debug.Log("saved audio" + audioVolume);
+        AudioListener.pause = !AudioListener.pause;
+        Debug.Log("Звук " + !AudioListener.pause);
+    }
+
+    public void SaveSlidersValue()
+    {
+        // Сохраняем значение слайдеров в PlayerPrefs
+        PlayerPrefs.SetFloat("SliderMainValue", sliderMain.value);
+        PlayerPrefs.SetFloat("SliderMusicValue", sliderMusic.value);
+        PlayerPrefs.SetFloat("SliderSoundValue", sliderSound.value);
+        Debug.Log("saved audio " + mainAudioVolume + ' ' + musicAudioVolume + ' ' + soundAudioVolume);
     }
 
     public void SaveDropdownValue()
     {
         PlayerPrefs.SetInt("DropdownValue", dropdown.value);
-        Debug.Log("saved quality" + audioVolume);
+        Debug.Log("saved quality" + mainAudioVolume);
     }
 
     //public void OnSceneChange(Scene scene, LoadSceneMode mode)
     //{
     //    // Сохраняем значение слайдера перед переходом к другой сцене
-    //    SaveSliderValue();
+    //    SaveSliderMainValue();
     //}
 
     //Управление качеством
@@ -65,25 +78,43 @@ public class GameSettings : MonoBehaviour
         QualitySettings.SetQualityLevel(q);
     }
 
+    // Загрузка настроек
     void OnEnable()
     {
-        audioVolume = PlayerPrefs.GetFloat("SliderValue");
+        mainAudioVolume = PlayerPrefs.GetFloat("SliderMainValue");
+        musicAudioVolume = PlayerPrefs.GetFloat("SliderMusicValue");
+        soundAudioVolume = PlayerPrefs.GetFloat("SliderSoundValue");
         qualityValue = PlayerPrefs.GetInt("DropdownValue");
-        slider.value = audioVolume;
+        sliderMain.value = mainAudioVolume;
+        sliderMusic.value = musicAudioVolume;
+        sliderSound.value = soundAudioVolume;
         dropdown.value = qualityValue;
-        Debug.Log("Loaded audio" + audioVolume);
-        Debug.Log("Loaded quality" + qualityValue);
+        Debug.Log("Loaded audio " + mainAudioVolume + ' ' + musicAudioVolume + ' ' + soundAudioVolume);
+        Debug.Log("Loaded quality " + qualityValue);
     }
 
+    // Сохранение настроек
     void OnDisable()
     {
-        SaveSliderValue();
+        SaveSlidersValue();
         SaveDropdownValue();
     }
 
-    // Управление громкостью слайдером
-    void AudioVolume (float sliderValue) {
-        am.SetFloat("masterVolume", Mathf.Log10(sliderValue) * VolCoeff);
-        audioVolume = sliderValue;
+    // Управление громкостью слайдерами
+    void MainAudioVolume (float sliderValue) {
+        mainAM.SetFloat("masterVolume", Mathf.Log10(sliderValue) * VolCoeff);
+        mainAudioVolume = sliderValue;
+    }
+
+    void MusicAudioVolume(float sliderValue)
+    {
+        musicAM.SetFloat("musicVolume", Mathf.Log10(sliderValue) * VolCoeff);
+        musicAudioVolume = sliderValue;
+    }
+
+    void SoundAudioVolume(float sliderValue)
+    {
+        soundAM.SetFloat("soundVolume", Mathf.Log10(sliderValue) * VolCoeff);
+        soundAudioVolume = sliderValue;
     }
 }

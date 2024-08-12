@@ -8,11 +8,11 @@ public class PersRBController : MonoBehaviour
     [SerializeField] private float turnSpeed = 0.1f;
     [SerializeField] private float speed = 15f;
 
-        public float Speed
-        {
-            get { return speed; }
-            set { speed = value; }
-        }
+    public float Speed
+    {
+        get { return speed; }
+        set { speed = value; }
+    }
 
     public bool IsKeyDown
     {
@@ -26,7 +26,6 @@ public class PersRBController : MonoBehaviour
     private Vector3 direction;
     private Quaternion supRotation;    
     private Rigidbody rb;
-    private AudioSource audioSource;
     private bool isKeyDown = false;
     private float h;
     private float v;
@@ -36,7 +35,6 @@ public class PersRBController : MonoBehaviour
         Time.timeScale = 1f;
         rb= GetComponent<Rigidbody>();
         supTransform= rb.GetComponent<Transform>();
-        audioSource = GetComponent<AudioSource>();
         rb.drag = drag;
     }
 
@@ -48,14 +46,10 @@ public class PersRBController : MonoBehaviour
         if (v > 0 || h > 0)
         {
             isKeyDown = true;
-            if (!audioSource.isPlaying)
-                audioSource.Play();
         }
         else
         {
             isKeyDown = false;
-            if (audioSource.isPlaying)
-                audioSource.Stop();
         }
     }
 
@@ -70,8 +64,5 @@ public class PersRBController : MonoBehaviour
         supRotation = Quaternion.Euler(Vector3.up * h * turnSpeed);
         rb.MoveRotation(rb.rotation * supRotation);
         rb.AddForce(direction*speed*-v, ForceMode.Force);
-
-
     }
-
 }
