@@ -11,6 +11,7 @@ public class MoneySack : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             other.GetComponent<Score>().AddScore(scoreBoost); // Увеличиваем счет игрока
+            other.GetComponent<EnvironmentAudioController>().MoneySack();
             Destroy(gameObject); // Уничтожаем мешок после столкновения
         }
     }
