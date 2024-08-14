@@ -24,14 +24,21 @@ public class PlayerAnimation : MonoBehaviour
         animator.SetFloat("verticalMove", v);
         animator.SetFloat("horizontalMove", h);
 
-        if (v > 0)
+        if (v != 0 || h !=0)
         {
-            animator.SetBool("SwimForward", true);
+            //animator.SetBool("SwimForward", true);
+            //animator.SetBool("SwimBackward", false);
+            animator.SetBool("isMove", true);
+
         }
         else
         {
-            animator.SetBool("SwimForward", false);
+            animator.SetBool("isMove", false);
+            //animator.SetBool("SwimForward", false);
+            //animator.SetBool("SwimBackward", true);
+
         }
+
 
         if (h > 0.1f)
             animatorVeslo.ChangeParentObject(0);
