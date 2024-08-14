@@ -28,9 +28,10 @@ public class Stamina : MonoBehaviour
         get => _currentSP;
         set
         {
-            _currentSP = value;
+            _currentSP = value > _maxSP ? _maxSP : value;
             SpChanged?.Invoke(_currentSP);
             SpChangedPercent?.Invoke(_currentSP / _maxSP);
+            Debug.Log("Stamina = " + _currentSP);
         }
     }
     private void Start()

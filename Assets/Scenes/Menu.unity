@@ -1894,6 +1894,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 962179686}
   m_CullTransparentMesh: 1
+--- !u!114 &1023760391 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2913938323899759885, guid: 11d18bd5c48ba9b4e816bed2455d9154, type: 3}
+  m_PrefabInstance: {fileID: 6942825049785109979}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9085046f02f69544eb97fd06b6048fe2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1074295165
 GameObject:
   m_ObjectHideFlags: 0
@@ -2681,7 +2692,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63233cde249b0ff49b9b732a872aef4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soundToggle: {fileID: 0}
+  soundToggle: {fileID: 1023760391}
+  fullScreenToggle: {fileID: 1518096273}
   dropdown: {fileID: 1758575279}
   sliderMain: {fileID: 1278152162}
   sliderMusic: {fileID: 1215714943}
@@ -2950,19 +2962,7 @@ MonoBehaviour:
   m_Group: {fileID: 0}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1419109821}
-        m_TargetAssemblyTypeName: GameSettings, Assembly-CSharp
-        m_MethodName: FullScreenToggle
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_IsOn: 1
 --- !u!1 &1566882033
 GameObject:
@@ -5381,6 +5381,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2861242881398907589, guid: 11d18bd5c48ba9b4e816bed2455d9154, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2913938323899759885, guid: 11d18bd5c48ba9b4e816bed2455d9154, type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.size
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2913938323899759885, guid: 11d18bd5c48ba9b4e816bed2455d9154, type: 3}

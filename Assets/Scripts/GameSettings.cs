@@ -8,6 +8,7 @@ using TMPro;
 public class GameSettings : MonoBehaviour
 {
     [SerializeField] private Toggle soundToggle;
+    [SerializeField] private Toggle fullScreenToggle;
     [SerializeField] private TMP_Dropdown dropdown;    
     [SerializeField] private Slider sliderMain;
     [SerializeField] private Slider sliderMusic;
@@ -21,6 +22,8 @@ public class GameSettings : MonoBehaviour
     private float musicAudioVolume;
     private float soundAudioVolume;
     private int qualityValue;
+    private bool fullScreenValue;
+    private bool soundOnValue;
 
     void Start()
     {
@@ -36,19 +39,26 @@ public class GameSettings : MonoBehaviour
 
         dropdown?.onValueChanged.AddListener(Quality);
 
+        soundToggle?.onValueChanged.AddListener(SoundOnToggle);
+
         //qualityValue.onValueChanged.AddListener(Quality);
     }
 
-    public void FullScreenToggle()
+    public void FullScreenToggle(bool toggle)
     {
-        Screen.fullScreen = !Screen.fullScreen;
+        Screen.fullScreen = toggle;
+        //Screen.fullScreen = !Screen.fullScreen;
+        fullScreenValue = Screen.fullScreen;
         Debug.Log(Screen.fullScreen);
     }
 
-    public void SoundOnToggle()
+    public void SoundOnToggle(bool toggle)
     {
-        AudioListener.pause = !AudioListener.pause;
+        AudioListener.pause = !toggle;
+        //AudioListener.pause = !AudioListener.pause;
+        soundOnValue = !AudioListener.pause;
         Debug.Log("Звук " + !AudioListener.pause);
+        Debug.Log("soundOnValue = " + soundOnValue);
     }
 
     public void SaveSlidersValue()
@@ -64,6 +74,13 @@ public class GameSettings : MonoBehaviour
     {
         PlayerPrefs.SetInt("DropdownValue", dropdown.value);
         Debug.Log("saved quality" + mainAudioVolume);
+    }
+
+    public void SaveTogglesValues()
+    {
+        PlayerPrefs.SetInt("FullScreenValue", fullScreenValue ? 1 : 0);
+        PlayerPrefs.SetInt("SoundOnValue", soundOnValue ? 1 : 0);
+        Debug.Log("saved toggles " + fullScreenValue + ' ' + soundOnValue);
     }
 
     //public void OnSceneChange(Scene scene, LoadSceneMode mode)
@@ -85,12 +102,19 @@ public class GameSettings : MonoBehaviour
         musicAudioVolume = PlayerPrefs.GetFloat("SliderMusicValue");
         soundAudioVolume = PlayerPrefs.GetFloat("SliderSoundValue");
         qualityValue = PlayerPrefs.GetInt("DropdownValue");
+        soundOnValue = PlayerPrefs.GetInt("SoundOnValue") == 1;
+        fullScreenValue = PlayerPrefs.GetInt("FullScreenValue") == 1;
+
         sliderMain.value = mainAudioVolume;
         sliderMusic.value = musicAudioVolume;
         sliderSound.value = soundAudioVolume;
         dropdown.value = qualityValue;
+        soundToggle.isOn = soundOnValue;
+        fullScreenToggle.isOn = fullScreenValue;
+
         Debug.Log("Loaded audio " + mainAudioVolume + ' ' + musicAudioVolume + ' ' + soundAudioVolume);
         Debug.Log("Loaded quality " + qualityValue);
+        Debug.Log("Loaded toggles " + fullScreenValue + ' ' + soundOnValue);
     }
 
     // Сохранение настроек
@@ -98,6 +122,7 @@ public class GameSettings : MonoBehaviour
     {
         SaveSlidersValue();
         SaveDropdownValue();
+        SaveTogglesValues();
     }
 
     // Управление громкостью слайдерами
