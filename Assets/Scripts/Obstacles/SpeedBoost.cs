@@ -10,6 +10,7 @@ public class SpeedBoostBottle : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            other.GetComponent<EnvironmentAudioController>().BoosterBottle();
             StartCoroutine(BoostSpeed(other.gameObject));
         }
     }

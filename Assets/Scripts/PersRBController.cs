@@ -7,17 +7,32 @@ public class PersRBController : MonoBehaviour
 
     [SerializeField] private float turnSpeed = 0.1f;
     [SerializeField] private float speed = 15f;
+
+    public float Speed
+    {
+        get { return speed; }
+        set { speed = value; }
+    }
+
+    public bool IsKeyDown
+    {
+        get { return isKeyDown; }
+        set { isKeyDown = value; }
+    }
+
     [SerializeField] private float drag = 1f;
 
     private Transform supTransform;
     private Vector3 direction;
     private Quaternion supRotation;    
     private Rigidbody rb;
+    private bool isKeyDown = false;
     private float h;
     private float v;
 
     private void Start()
     {
+        Time.timeScale = 1f;
         rb= GetComponent<Rigidbody>();
         supTransform= rb.GetComponent<Transform>();
         rb.drag = drag;
@@ -28,6 +43,14 @@ public class PersRBController : MonoBehaviour
         h = Input.GetAxis("Horizontal");
         v = Input.GetAxis("Vertical");
         direction = supTransform.TransformDirection(Vector3.forward);
+        if (v > 0 || h > 0)
+        {
+            isKeyDown = true;
+        }
+        else
+        {
+            isKeyDown = false;
+        }
     }
 
     private void FixedUpdate()
@@ -41,8 +64,5 @@ public class PersRBController : MonoBehaviour
         supRotation = Quaternion.Euler(Vector3.up * h * turnSpeed);
         rb.MoveRotation(rb.rotation * supRotation);
         rb.AddForce(direction*speed*-v, ForceMode.Force);
-
-
     }
-
 }

@@ -12,10 +12,11 @@ public class EndPanel : MonoBehaviour
     [SerializeField] private TMP_Text endText;
     [SerializeField] private TMP_Text endScore;
 
+    private AudioSource endAudioSource;
+
     private void Start()
     {
         endPanel.SetActive(false);
-
     }
 
     public void EndGame()
@@ -24,6 +25,7 @@ public class EndPanel : MonoBehaviour
         inGamePanel.SetActive(false);
         endPanel.SetActive(true);
         Time.timeScale = 0f;
+        Debug.Log(GetComponent<AudioSource>().clip);
     }
 
     public void ToMainMenu()

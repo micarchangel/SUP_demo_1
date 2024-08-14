@@ -6,13 +6,13 @@ public class Sinking : MonoBehaviour
 {
     [SerializeField] private GameObject player;
     [SerializeField] private float sinkingSpeed = 2.0f;
-    [SerializeField] private float sinkDuration = 3.0f; // Длительность потопления
+    [SerializeField] private float sinkDuration = 3.0f; // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 
     public IEnumerator sinkCoroutine;
 
     public void PlayerSink()
     {
-        //Debug.Log("Потопление");
+        //Debug.Log("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
         sinkCoroutine = Sink(player);
         StartCoroutine(sinkCoroutine);
     }
@@ -21,9 +21,9 @@ public class Sinking : MonoBehaviour
     {
         float elapsedTime = 0.0f;
         Vector3 originalPosition = player.transform.position;
-        while (elapsedTime < sinkDuration) // Погружаем игрока
+        while (elapsedTime < sinkDuration) // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
         {
-            player.transform.position = originalPosition - Vector3.up * sinkingSpeed * elapsedTime; // уменьшаем позицию игрока по оси Y
+            player.transform.position = originalPosition - Vector3.up * sinkingSpeed * elapsedTime; // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅ Y
             elapsedTime += Time.deltaTime;
             yield return null;
         }

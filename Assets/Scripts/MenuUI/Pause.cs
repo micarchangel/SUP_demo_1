@@ -12,12 +12,13 @@ public class Pause : MonoBehaviour
     //[SerializeField] private int VolCoeff = 30;
     private bool escapeMenu;
 
-
     public void Start()
     {
+        //foreach (Transform child in pausePanel.transform)
+        //    child?.gameObject.SetActive(false);
+
         escapeMenu = false;
         pausePanel.gameObject.SetActive(false);
-        //QualitySettings.SetQualityLevel(3);
     }
 
     public void Update()
@@ -44,11 +45,15 @@ public class Pause : MonoBehaviour
     public void MyPause()
     {
         pausePanel.SetActive(true);
+        pauseUIButton.gameObject.SetActive(false);
+        escapeMenu = true;
         Time.timeScale = 0f;
     }
 
     public void MyPlay() { 
         pausePanel.SetActive(false);
+        pauseUIButton.gameObject.SetActive(true);
+        escapeMenu = false;
         Time.timeScale = 1f;
     }
 
