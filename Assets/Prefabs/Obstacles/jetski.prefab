@@ -168,7 +168,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   turnDistance: 10
-  player: {fileID: 6540387386093996442, guid: 03d1b4bd0bc72e74194f49e28acddbf2, type: 3}
+  playerTransform: {fileID: 3351170355449695374, guid: 52e57cbb38632dc48b71ce5116f14095, type: 3}
 --- !u!114 &-3340579315733581283
 MonoBehaviour:
   m_ObjectHideFlags: 0

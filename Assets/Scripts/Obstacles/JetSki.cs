@@ -4,7 +4,7 @@ public class JetSki : MonoBehaviour
 {
     [SerializeField] private float speed = -10f; // Скорость гидроцикла
     [SerializeField] private float turnDistance = 3f; // Расстояние до игрока, при котором гидроцикл отворачивается
-    [SerializeField] Transform player;
+    [SerializeField] private Transform playerTransform;
     //private AudioSource audioSource;
 
     private Vector3 direction;
@@ -18,12 +18,12 @@ public class JetSki : MonoBehaviour
     void Update()
     {
         // Рассчитываем расстояние до игрока
-        float distanceToPlayer = Vector3.Distance(transform.position, player.position);
+        float distanceToPlayer = Vector3.Distance(transform.position, playerTransform.position);
 
         // Если гидроцикл находится близко к игроку, меняем направление
         if (distanceToPlayer < turnDistance)
         {
-            direction = (transform.position - player.position).normalized;
+            direction = (transform.position - playerTransform.position).normalized;
         }
 
 
