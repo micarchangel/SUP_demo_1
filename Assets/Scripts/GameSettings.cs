@@ -31,6 +31,8 @@ public class GameSettings : MonoBehaviour
         musicAM.SetFloat("musicVolume", Mathf.Log10(musicAudioVolume) * VolCoeff);
         soundAM.SetFloat("soundVolume", Mathf.Log10(soundAudioVolume) * VolCoeff);
         QualitySettings.SetQualityLevel(qualityValue);
+        AudioListener.pause = !soundOnValue;
+        Screen.fullScreen = fullScreenValue;
 
         // Привязка функции к изменению значения слайдера
         sliderMain?.onValueChanged.AddListener(MainAudioVolume);
@@ -40,6 +42,7 @@ public class GameSettings : MonoBehaviour
         dropdown?.onValueChanged.AddListener(Quality);
 
         soundToggle?.onValueChanged.AddListener(SoundOnToggle);
+        fullScreenToggle?.onValueChanged.AddListener(FullScreenToggle);
 
         //qualityValue.onValueChanged.AddListener(Quality);
     }

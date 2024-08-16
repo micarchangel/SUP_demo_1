@@ -9,7 +9,7 @@ public class Fish : MonoBehaviour
     public float floatInterval = 2.0f; // Интервал между утоплением и всплытием
 
     private Vector3 originalPosition;
-    private bool isSinking = false;
+    //private bool isSinking = false;
 
     void Start()
     {
@@ -36,7 +36,7 @@ public class Fish : MonoBehaviour
 
     IEnumerator SinkAndRise()
     {
-        isSinking = true;
+        //isSinking = true;
         Vector3 sinkPosition = new Vector3(originalPosition.x, originalPosition.y - floatHeight, originalPosition.z);
 
         float elapsedTime = 0;
@@ -59,7 +59,7 @@ public class Fish : MonoBehaviour
         }
 
         transform.position = originalPosition;
-        isSinking = false;
+        //isSinking = false;
     }
 }
 

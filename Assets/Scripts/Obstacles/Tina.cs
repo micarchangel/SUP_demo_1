@@ -59,7 +59,7 @@ public class Tina : MonoBehaviour
         elapsedTime = 0;
         while (elapsedTime < sinkDuration)
         {
-            obj.transform.position = Vector3.Lerp(sinkPosition, originalPosition, (elapsedTime / sinkDuration));
+            //obj.transform.position = Vector3.Lerp(sinkPosition, originalPosition, (elapsedTime / sinkDuration));
             elapsedTime += Time.deltaTime;
             yield return null;
         }
