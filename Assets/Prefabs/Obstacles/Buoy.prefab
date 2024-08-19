@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: -5152149998252816116}
   - component: {fileID: 3273245900839191193}
   - component: {fileID: -1611096728777913641}
+  - component: {fileID: 3278015469346898385}
   m_Layer: 0
   m_Name: Buoy
   m_TagString: Untagged
@@ -128,6 +129,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sinkDuration: 10
   floatHeight: 4
+--- !u!114 &3278015469346898385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4446653626904894107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d93bdcc9b065f334499e77c1195cffe6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0.3
+  changeDirectionTime: 2
+  maxSpacing: 1
+  maxDegree: 10
+  sinkingValue: 0
 --- !u!1001 &7195902184732013110
 PrefabInstance:
   m_ObjectHideFlags: 0

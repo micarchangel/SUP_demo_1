@@ -1697,7 +1697,6 @@ GameObject:
   - component: {fileID: 504000980}
   - component: {fileID: 504000979}
   - component: {fileID: 504000978}
-  - component: {fileID: 504000977}
   - component: {fileID: 504000976}
   - component: {fileID: 504000981}
   m_Layer: 0
@@ -1734,28 +1733,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!64 &504000977
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 504000975}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &504000978
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1815,7 +1792,7 @@ Transform:
   m_GameObject: {fileID: 504000975}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0.17, y: 12.6, z: -776.65}
+  m_LocalPosition: {x: 0.17, y: 12.6, z: -777.39}
   m_LocalScale: {x: 3.93125, y: 1, z: 0.2375}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3689,6 +3666,7 @@ MonoBehaviour:
   mainAM: {fileID: 24100000, guid: 19ccb066a4098b4459467274addce0ba, type: 2}
   musicAM: {fileID: 24100000, guid: 3bafffe9b5ccc2246ab648f970d75413, type: 2}
   soundAM: {fileID: 24100000, guid: dddc86bb1eaa0dc448a9d4e2d7ef855a, type: 2}
+  inGameSoundsAM: {fileID: 24100000, guid: 9f087e261edde7b4dad234e0bd8e6fd2, type: 2}
   VolCoeff: 30
 --- !u!114 &1223538410
 MonoBehaviour:
@@ -6657,9 +6635,41 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1223538410}
     - target: {fileID: 7278082412641263207, guid: 61d4b9456d8b1534da032092027592a3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7278082412641263207, guid: 61d4b9456d8b1534da032092027592a3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7278082412641263207, guid: 61d4b9456d8b1534da032092027592a3, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1223538410}
+    - target: {fileID: 7278082412641263207, guid: 61d4b9456d8b1534da032092027592a3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1223538409}
+    - target: {fileID: 7278082412641263207, guid: 61d4b9456d8b1534da032092027592a3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7278082412641263207, guid: 61d4b9456d8b1534da032092027592a3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: set_IsPlaying
+      objectReference: {fileID: 0}
+    - target: {fileID: 7278082412641263207, guid: 61d4b9456d8b1534da032092027592a3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: GameSettings, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7278082412641263207, guid: 61d4b9456d8b1534da032092027592a3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7278082412641263207, guid: 61d4b9456d8b1534da032092027592a3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6810,10 +6820,6 @@ PrefabInstance:
       propertyPath: failPanel
       value: 
       objectReference: {fileID: 310864556}
-    - target: {fileID: 3233425697931496772, guid: 52e57cbb38632dc48b71ce5116f14095, type: 3}
-      propertyPath: riverSound
-      value: 
-      objectReference: {fileID: 327324457}
     - target: {fileID: 3233425697931496772, guid: 52e57cbb38632dc48b71ce5116f14095, type: 3}
       propertyPath: inGameAudio
       value: 

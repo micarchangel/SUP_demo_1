@@ -2098,8 +2098,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3351170355449695374}
   - component: {fileID: 5324660588273964572}
-  - component: {fileID: 2470265418063826932}
-  - component: {fileID: 2800790670732967415}
   - component: {fileID: 3233425697931496772}
   - component: {fileID: 8702381153095528078}
   - component: {fileID: 7429229482932231755}
@@ -2109,6 +2107,7 @@ GameObject:
   - component: {fileID: 5107812701215613890}
   - component: {fileID: 212426987548058088}
   - component: {fileID: 8031651955780581305}
+  - component: {fileID: 4089680238698083423}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -2162,50 +2161,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!136 &2470265418063826932
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3770894571210033890}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5027294
-  m_Height: 1.0054588
-  m_Direction: 1
-  m_Center: {x: 0.00000023841858, y: 0.12, z: -2.54}
---- !u!65 &2800790670732967415
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3770894571210033890}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1.5304217, y: 1.5976849, z: 4.803446}
-  m_Center: {x: -0.026521087, y: 0.29884243, z: 0.53}
 --- !u!114 &3233425697931496772
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2221,9 +2176,7 @@ MonoBehaviour:
   failPanel: {fileID: 0}
   successPanel: {fileID: 0}
   inGameAudio: {fileID: 0}
-  playerAudio: {fileID: 2085438198451717764}
-  environmentAudio: {fileID: 7258674064925780871}
-  riverSound: {fileID: 0}
+  inGameSoundsAM: {fileID: 24100000, guid: 9f087e261edde7b4dad234e0bd8e6fd2, type: 2}
   endText: {fileID: 0}
   endScore: {fileID: 0}
   delay: 3
@@ -2240,7 +2193,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   turnSpeed: 0.4
-  speed: 15
+  speed: 20
   drag: 1
 --- !u!114 &7429229482932231755
 MonoBehaviour:
@@ -2434,6 +2387,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40b2d0385e53edd4a9ff539b6e0ed0d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!136 &4089680238698083423
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3770894571210033890}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.75
+  m_Height: 6.3
+  m_Direction: 2
+  m_Center: {x: 0, y: -0.15, z: 0}
 --- !u!1 &3815761128670207293
 GameObject:
   m_ObjectHideFlags: 0

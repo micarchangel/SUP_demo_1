@@ -9,14 +9,11 @@ public class Pause : MonoBehaviour
     [SerializeField] private GameObject pausePanel;
     [SerializeField] private Button pauseUIButton;
     [SerializeField] private AudioMixer am;
-    //[SerializeField] private int VolCoeff = 30;
+
     private bool escapeMenu;
 
     public void Start()
     {
-        //foreach (Transform child in pausePanel.transform)
-        //    child?.gameObject.SetActive(false);
-
         escapeMenu = false;
         pausePanel.gameObject.SetActive(false);
     }
@@ -47,6 +44,7 @@ public class Pause : MonoBehaviour
         pausePanel.SetActive(true);
         pauseUIButton.gameObject.SetActive(false);
         escapeMenu = true;
+        GameSettings.IsPlaying = false;
         Time.timeScale = 0f;
     }
 
@@ -54,6 +52,7 @@ public class Pause : MonoBehaviour
         pausePanel.SetActive(false);
         pauseUIButton.gameObject.SetActive(true);
         escapeMenu = false;
+        GameSettings.IsPlaying = true;
         Time.timeScale = 1f;
     }
 
