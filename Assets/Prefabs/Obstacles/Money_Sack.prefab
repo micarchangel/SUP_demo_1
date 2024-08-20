@@ -10,15 +10,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: cbecfa8e6cfa7344ba116ae55a4da955, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.01
+      value: 0.02
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cbecfa8e6cfa7344ba116ae55a4da955, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.01
+      value: 0.02
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cbecfa8e6cfa7344ba116ae55a4da955, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.01
+      value: 0.02
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cbecfa8e6cfa7344ba116ae55a4da955, type: 3}
       propertyPath: m_LocalPosition.x
@@ -64,10 +64,22 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -7912207653416862199, guid: cbecfa8e6cfa7344ba116ae55a4da955, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: -8613640343842051325, guid: e289b95f50b7b6c46939bf13ba63d986, type: 3}
     - target: {fileID: 919132149155446097, guid: cbecfa8e6cfa7344ba116ae55a4da955, type: 3}
       propertyPath: m_Name
       value: Money_Sack
       objectReference: {fileID: 0}
+    - target: {fileID: 4149291711120374042, guid: cbecfa8e6cfa7344ba116ae55a4da955, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: -7368875629372560561, guid: fbdad89a49846b649a04058ec66f6a39, type: 3}
+    - target: {fileID: 8401985219583758041, guid: cbecfa8e6cfa7344ba116ae55a4da955, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 9168491366014383860, guid: e289b95f50b7b6c46939bf13ba63d986, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -81,6 +93,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cbecfa8e6cfa7344ba116ae55a4da955, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4994346694252792033}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cbecfa8e6cfa7344ba116ae55a4da955, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -9193783540623718554}
   m_SourcePrefab: {fileID: 100100000, guid: cbecfa8e6cfa7344ba116ae55a4da955, type: 3}
 --- !u!1 &8215218379135254215 stripped
 GameObject:
@@ -150,3 +165,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreBoost: 100
+--- !u!114 &-9193783540623718554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8215218379135254215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d93bdcc9b065f334499e77c1195cffe6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0.3
+  changeDirectionTime: 2
+  maxSpacing: 1
+  maxDegree: 30
+  sinkingValue: 0.5

@@ -16,6 +16,7 @@ public class GameSettings : MonoBehaviour
     [SerializeField] private AudioMixer mainAM;
     [SerializeField] private AudioMixer musicAM;
     [SerializeField] private AudioMixer soundAM;
+    [SerializeField] private AudioMixer inGameSoundsAM;
     [SerializeField] private int VolCoeff;
 
     private float mainAudioVolume;
@@ -24,6 +25,17 @@ public class GameSettings : MonoBehaviour
     private int qualityValue;
     private bool fullScreenValue;
     private bool soundOnValue;
+
+    static private bool _isPlaying;
+
+    static public bool IsPlaying
+    {
+        get => _isPlaying;
+        set
+        {
+            _isPlaying = value;
+        }
+    }
 
     void Start()
     {

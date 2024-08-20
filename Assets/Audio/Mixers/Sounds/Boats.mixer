@@ -54,7 +54,7 @@ AudioMixerController:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Boats
-  m_OutputGroup: {fileID: 24300002, guid: dddc86bb1eaa0dc448a9d4e2d7ef855a, type: 2}
+  m_OutputGroup: {fileID: 24300002, guid: 9f087e261edde7b4dad234e0bd8e6fd2, type: 2}
   m_MasterGroup: {fileID: 24300002}
   m_Snapshots:
   - {fileID: 24500006}

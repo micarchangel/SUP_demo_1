@@ -1,22 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class EnvironmentAudioController : MonoBehaviour
 {
-    //private Transform[] audioSources;
-
-    //private void Start()
-    //{
-    //    audioSources = new Transform[transform.childCount];
-
-    //    int i = 0;
-    //    foreach (Transform t in transform)
-    //    {
-    //        audioSources[i++] = t;
-    //    }
-    //}
-
     private Transform audioController;
 
     private void Start()

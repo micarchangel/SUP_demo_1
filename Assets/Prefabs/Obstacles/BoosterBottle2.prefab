@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7051847598903502318}
   - component: {fileID: 8674572468717845309}
   - component: {fileID: 4304298737737117201}
+  - component: {fileID: 6562497728686809436}
   m_Layer: 0
   m_Name: BoosterBottle2
   m_TagString: Untagged
@@ -114,6 +115,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sinkDuration: 10
   floatHeight: 1
+--- !u!114 &6562497728686809436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6657112215201483406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d93bdcc9b065f334499e77c1195cffe6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0.3
+  changeDirectionTime: 2
+  maxSpacing: 1
+  maxDegree: 30
+  sinkingValue: 1
 --- !u!1001 &2462029671207058606
 PrefabInstance:
   m_ObjectHideFlags: 0
