@@ -14,6 +14,7 @@ public class EndGame : MonoBehaviour
     [SerializeField] private TMP_Text endText;
     [SerializeField] private TMP_Text endScore;
     [SerializeField] private TMP_Text endTime;
+    [SerializeField] private TMP_Text playerName; 
     [SerializeField] private float delay = 3.0f;
     
 
@@ -40,7 +41,7 @@ public class EndGame : MonoBehaviour
     public void GameComplete()
     {
         GameSettings.IsPlaying = false;
-        endText.text += "\n\n" + endScore.text + '\n' + endTime.text;
+        endText.text += "\n" + endScore.text + '\n' + endTime.text;
         StopAudio();
         successPanel.SetActive(true);
         Time.timeScale = 0f;

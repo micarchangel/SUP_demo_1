@@ -2107,6 +2107,7 @@ GameObject:
   - component: {fileID: 5107812701215613890}
   - component: {fileID: 212426987548058088}
   - component: {fileID: 8031651955780581305}
+  - component: {fileID: 3954843123874520443}
   - component: {fileID: 4089680238698083423}
   m_Layer: 0
   m_Name: Player
@@ -2179,6 +2180,7 @@ MonoBehaviour:
   inGameSoundsAM: {fileID: 24100000, guid: 9f087e261edde7b4dad234e0bd8e6fd2, type: 2}
   endText: {fileID: 0}
   endScore: {fileID: 0}
+  endTime: {fileID: 0}
   delay: 3
 --- !u!114 &8702381153095528078
 MonoBehaviour:
@@ -2387,6 +2389,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40b2d0385e53edd4a9ff539b6e0ed0d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &3954843123874520443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3770894571210033890}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49bc37c6ff3ef3645810bc7716c9e9df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timerText:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: TMPro.TMP_Text, Unity.TextMeshPro
+        m_MethodName: set_text
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!136 &4089680238698083423
 CapsuleCollider:
   m_ObjectHideFlags: 0

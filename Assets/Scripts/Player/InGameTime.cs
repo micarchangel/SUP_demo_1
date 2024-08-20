@@ -10,6 +10,8 @@ public class InGameTime : MonoBehaviour
 
     private float _timer;
 
+    public float PlayerTime => _timer;
+
     void Start()
     {
         Init();
