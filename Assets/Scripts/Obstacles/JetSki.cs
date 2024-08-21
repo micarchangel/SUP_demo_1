@@ -12,7 +12,7 @@ public class JetSki : MonoBehaviour
     void Start()
     {
         // Костыль для поворота объекта на 180 градусов в обход префаба
-        transform?.Rotate(0f, 180f, 0f, Space.Self);
+        //transform?.Rotate(0f, 180f, 0f, Space.Self);
         direction = Vector3.forward; // Начальное направление движения
         gameObject.GetComponent<AudioSource>().Play();
     }

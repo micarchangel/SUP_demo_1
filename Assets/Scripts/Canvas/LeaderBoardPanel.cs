@@ -95,7 +95,7 @@ public class LeaderBoardPanel : MonoBehaviour
         PlayerPrefs.SetString("highScoreTable", json);
         PlayerPrefs.Save();
 
-        GetHighscore();
+        //GetHighscore();
 
         Debug.Log("Записано " + name + ' ' + score + ' ' +time);
     }
