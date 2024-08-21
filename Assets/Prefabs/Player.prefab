@@ -2197,9 +2197,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b957fc4ebe93804b93667f8ee82754b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  failPanel: {fileID: 0}
-  successPanel: {fileID: 0}
-  inGameAudio: {fileID: 0}
+  failPanel: {fileID: 4014605464752340089, guid: 61d4b9456d8b1534da032092027592a3, type: 3}
+  successPanel: {fileID: 8524131086839660857, guid: b1c3a67f405b1434884d00a96127b021, type: 3}
+  inGameAudio: {fileID: 664369317390297089, guid: 3b7b331ace24140419f8c9663f559ca4, type: 3}
   inGameSoundsAM: {fileID: 24100000, guid: 9f087e261edde7b4dad234e0bd8e6fd2, type: 2}
   endText: {fileID: 0}
   endScore: {fileID: 0}
