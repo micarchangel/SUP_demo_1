@@ -2098,6 +2098,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3351170355449695374}
   - component: {fileID: 5324660588273964572}
+  - component: {fileID: 4089680238698083423}
   - component: {fileID: 3233425697931496772}
   - component: {fileID: 8702381153095528078}
   - component: {fileID: 7429229482932231755}
@@ -2107,7 +2108,7 @@ GameObject:
   - component: {fileID: 5107812701215613890}
   - component: {fileID: 212426987548058088}
   - component: {fileID: 8031651955780581305}
-  - component: {fileID: 4089680238698083423}
+  - component: {fileID: 3954843123874520443}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -2161,6 +2162,29 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!136 &4089680238698083423
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3770894571210033890}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.75
+  m_Height: 6.3
+  m_Direction: 2
+  m_Center: {x: 0, y: -0.15, z: 0}
 --- !u!114 &3233425697931496772
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2173,12 +2197,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b957fc4ebe93804b93667f8ee82754b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  failPanel: {fileID: 0}
-  successPanel: {fileID: 0}
-  inGameAudio: {fileID: 0}
+  failPanel: {fileID: 4014605464752340089, guid: 61d4b9456d8b1534da032092027592a3, type: 3}
+  successPanel: {fileID: 8524131086839660857, guid: b1c3a67f405b1434884d00a96127b021, type: 3}
+  inGameAudio: {fileID: 664369317390297089, guid: 3b7b331ace24140419f8c9663f559ca4, type: 3}
   inGameSoundsAM: {fileID: 24100000, guid: 9f087e261edde7b4dad234e0bd8e6fd2, type: 2}
   endText: {fileID: 0}
   endScore: {fileID: 0}
+  endTime: {fileID: 0}
+  playerName: {fileID: 0}
   delay: 3
 --- !u!114 &8702381153095528078
 MonoBehaviour:
@@ -2387,29 +2413,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40b2d0385e53edd4a9ff539b6e0ed0d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!136 &4089680238698083423
-CapsuleCollider:
+--- !u!114 &3954843123874520443
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3770894571210033890}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.75
-  m_Height: 6.3
-  m_Direction: 2
-  m_Center: {x: 0, y: -0.15, z: 0}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49bc37c6ff3ef3645810bc7716c9e9df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timerText:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: TMPro.TMP_Text, Unity.TextMeshPro
+        m_MethodName: set_text
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &3815761128670207293
 GameObject:
   m_ObjectHideFlags: 0

@@ -9,6 +9,9 @@ public class EndPanel : MonoBehaviour
 {
     [SerializeField] private GameObject inGamePanel;
     [SerializeField] private GameObject endPanel;
+    [SerializeField] private TMP_Text nameText;
+    [SerializeField] private GameObject player;
+    [SerializeField] private LeaderBoardPanel leaderBoard;
 
     private void Start()
     {
@@ -23,5 +26,15 @@ public class EndPanel : MonoBehaviour
     public void ReloadScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void SaveScore()
+    {
+        string name = nameText.text;
+        int score = player.GetComponent<Score>().score;
+        float time = player.GetComponent<InGameTime>().PlayerTime;
+
+        leaderBoard.AddHighscoreEntry(name, score, time);
+        leaderBoard.GetHighscore();
     }
 }
