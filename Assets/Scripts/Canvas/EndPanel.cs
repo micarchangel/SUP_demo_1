@@ -11,7 +11,7 @@ public class EndPanel : MonoBehaviour
     [SerializeField] private GameObject endPanel;
     [SerializeField] private TMP_Text nameText;
     [SerializeField] private GameObject player;
-    [SerializeField] private GameObject leaderBoard;
+    [SerializeField] private LeaderBoardPanel leaderBoard;
 
     private void Start()
     {
@@ -34,6 +34,7 @@ public class EndPanel : MonoBehaviour
         int score = player.GetComponent<Score>().score;
         float time = player.GetComponent<InGameTime>().PlayerTime;
 
-        leaderBoard.GetComponent<LeaderBoardPanel>().AddHighscoreEntry(name, score, time);
+        leaderBoard.AddHighscoreEntry(name, score, time);
+        leaderBoard.GetHighscore();
     }
 }
