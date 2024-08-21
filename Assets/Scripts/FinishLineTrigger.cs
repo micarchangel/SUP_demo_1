@@ -1,17 +1,15 @@
-using System.Collections;
-using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using UnityEngine.Events;
 
 public class FinishLineTrigger : MonoBehaviour
 {
-    [SerializeField] private GameObject ending;
-    private EndPanel _endPanel;
+    [SerializeField] private UnityEvent End;
+    //[SerializeField] private GameObject ending;
+    //private EndPanel _endPanel;
 
     private void Start()
     {
-        _endPanel = ending.GetComponent<EndPanel>();
+        
     }
 
     void OnTriggerEnter(Collider other)
@@ -19,7 +17,8 @@ public class FinishLineTrigger : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             //Debug.Log("Level Finished!");
-            _endPanel.EndGame();
+            EndGame.Success = true;
+            End?.Invoke();
         }
     }
 }

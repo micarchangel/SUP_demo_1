@@ -12,9 +12,11 @@ GameObject:
   - component: {fileID: 6057920140832452999}
   - component: {fileID: 7359782236072315150}
   - component: {fileID: 7635372438773519095}
+  - component: {fileID: -792187345747745844}
   - component: {fileID: 805091218970845216}
   - component: {fileID: 7402460141437901661}
   - component: {fileID: 4400049724626590933}
+  - component: {fileID: 2702310245972490374}
   m_Layer: 0
   m_Name: WoodBox2
   m_TagString: Untagged
@@ -108,6 +110,27 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &-792187345747745844
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2978412905944789803}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &805091218970845216
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -148,7 +171,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _damage: 2
-  _score: 0
+  _score: 1
 --- !u!114 &4400049724626590933
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -163,3 +186,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0.3
   changeDirectionTime: 2
+--- !u!114 &2702310245972490374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2978412905944789803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b524d027b553ae14988407c08b377f68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sinkDuration: 10
+  floatHeight: 2

@@ -4,7 +4,12 @@ using UnityEngine;
 
 public class SlowMoveRiverKater : MonoBehaviour
 {
-    public float speed = 0.5f; // Скорость движения
+    [SerializeField] private float speed = 0.5f; // Скорость движения
+
+    private void Start()
+    {
+        gameObject.GetComponent<AudioSource>().Play();
+    }
 
     void Update()
     {

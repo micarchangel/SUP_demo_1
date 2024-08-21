@@ -1,5 +1,5 @@
+using System.Collections;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class ExplodeAndRestartGame : MonoBehaviour
 {
@@ -9,11 +9,10 @@ public class ExplodeAndRestartGame : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            //Debug.Log("Взрыв");
+            other.GetComponent<EnvironmentAudioController>().SeaMine();
             Instantiate(explosionEffect, transform.position, transform.rotation);
             Destroy(gameObject);
-
-            string currentSceneName = SceneManager.GetActiveScene().name;
-            //SceneManager.LoadScene(currentSceneName);
         }
     }
 }

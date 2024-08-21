@@ -39,7 +39,7 @@ public class ShipAndJetSkiGenerator : MonoBehaviour
             // Генерация объекта в случайной позиции в водном пространстве
             Vector3 randomPosition = new Vector3(
                 Random.Range(waterPosX - waterWidth / 2, waterPosX + waterWidth / 2), // Ширина реки
-                12.5f, // Высота (на уровне воды)
+                13.3f, // Высота (на уровне воды)
                 Random.Range(waterLengthStart, waterLengthEnd) // Длина реки
             );
 

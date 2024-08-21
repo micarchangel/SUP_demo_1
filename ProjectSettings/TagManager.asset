@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - AudioSlider
+  - Ship
+  - Enemy
+  - JetSki
   layers:
   - Default
   - TransparentFX

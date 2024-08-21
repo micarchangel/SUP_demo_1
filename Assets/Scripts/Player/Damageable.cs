@@ -13,7 +13,7 @@ public class Damageable : MonoBehaviour
         if (other.TryGetComponent<Obstacle>(out var obstacle))
         {
             DamageGot?.Invoke(obstacle.Damage);
-            //Debug.Log("touch damage");
+            Debug.Log("touch damage");
         }
     }
 }
