@@ -9,8 +9,9 @@ public class ObjectDestroyer : MonoBehaviour
 
     void Update()
     {
-        if (player != null && transform.position.z < player.position.z - destroyDistanceBehind)
+        if (player != null && transform.position.z > transform.position.z + destroyDistanceBehind)
         {
+            //Debug.Log($"Объект уничтожен.");
             Destroy(gameObject);
         }
     }

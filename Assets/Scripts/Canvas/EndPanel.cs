@@ -32,7 +32,8 @@ public class EndPanel : MonoBehaviour
     {
         string name = nameText.text;
         int score = player.GetComponent<Score>().score;
-        float time = player.GetComponent<InGameTime>().PlayerTime;
+        Transform events = transform.Find("Events");
+        float time = events.GetComponent<InGameTime>().PlayerTime;
 
         leaderBoard.AddHighscoreEntry(name, score, time);
         leaderBoard.GetHighscore();

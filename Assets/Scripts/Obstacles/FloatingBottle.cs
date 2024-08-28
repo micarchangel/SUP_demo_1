@@ -11,13 +11,27 @@ public class FloatingBottle : MonoBehaviour
     [SerializeField] private float maxDegree = 30f;
     [SerializeField] private float sinkingValue = 1f; // значение, на которое притопляется бутылка
 
+    private CapsuleCollider objCollider;
     private float maxY;
+    private float minY;
     private Vector3 direction; // Текущее направление движения
     private Vector3 rotation; // Угол поворота бутылки
 
     void Start()
     {
-        maxY = transform.position.y - sinkingValue;
+        if (TryGetComponent<CapsuleCollider>(out objCollider) && objCollider.direction == 1)
+        {
+            maxY = transform.position.y;
+            minY = transform.position.y - objCollider.height / 2 - sinkingValue;
+        }
+        else
+        {
+            maxY = transform.position.y - sinkingValue;
+            minY = transform.position.y - sinkingValue * 2;
+        }
+
+        //Debug.Log($"{name}: maxY = {maxY}; miny = {minY}");
+
         // Задаем начальное случайное направление
         ChangeDirection();
         ChangeRotation();
@@ -31,6 +45,8 @@ public class FloatingBottle : MonoBehaviour
         // Чтоб объекты не вылетали из воды из-за вращения
         if (transform.position.y >= maxY)
             direction.y = -sinkingValue;
+        else if (transform.position.y <= minY)
+            direction.y = sinkingValue;
         else
             transform.Rotate(rotationSpeed * Time.deltaTime * rotation, Space.Self);
 
