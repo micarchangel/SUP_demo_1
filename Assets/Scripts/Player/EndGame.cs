@@ -61,7 +61,7 @@ public class EndGame : MonoBehaviour
         if (_success)
         {
             callFunc = "GameComplete";
-            delay = 0f;
+            delay = 3f;
         }
         else
         {
