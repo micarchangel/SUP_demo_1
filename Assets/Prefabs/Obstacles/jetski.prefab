@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 4506211027438261385}
   - component: {fileID: 7529648970012851054}
   - component: {fileID: 5498950761402294838}
-  - component: {fileID: -6942929050608387936}
   - component: {fileID: 1107542645544656395}
+  - component: {fileID: 8223972062661166198}
   m_Layer: 0
   m_Name: jetski
   m_TagString: Untagged
@@ -59,7 +59,7 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 116
@@ -219,21 +219,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _damage: 1
   _score: 0
---- !u!114 &-6942929050608387936
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 325474894406711743}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3514de1ce5df2744afe7ca729730fb1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 10
-  turnDistance: 10
-  playerTransform: {fileID: 3351170355449695374, guid: 52e57cbb38632dc48b71ce5116f14095, type: 3}
 --- !u!114 &1107542645544656395
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -247,6 +232,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyDistanceBehind: 30
+--- !u!114 &8223972062661166198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 325474894406711743}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 136286d2e76ed7640ad3855c42bef4d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
+  turnSpeed: 1
+  detectionDistance: 5
 --- !u!1001 &281332316716224550
 PrefabInstance:
   m_ObjectHideFlags: 0
