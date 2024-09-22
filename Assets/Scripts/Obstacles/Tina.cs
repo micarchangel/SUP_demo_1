@@ -1,13 +1,13 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Tina : MonoBehaviour
 {
-    //[SerializeField] private float slowDownDuration = 5.0f; // Продолжительность замедления игрока в секундах
-    [SerializeField] private float speedCoeff = 0.2f; // коэфф. скорости игрока
-    [SerializeField] private float sinkDuration = 4.0f; // время утопления-всплытия
-    [SerializeField] private float floatHeight = 2.0f; // высота всплытия
-    [SerializeField] private float floatDelay = 2.0f; // время задержки перед всплытием тины
+    public float speedCoeff = 0.2f;  // Коэффициент замедления скорости
+    public float sinkDuration = 4.0f;  // Время погружения
+    public float floatHeight = 2.0f;  // Высота всплытия
+    public float floatDelay = 2.0f;  // Задержка перед всплытием
 
     private void OnTriggerEnter(Collider other)
     {
@@ -17,53 +17,52 @@ public class Tina : MonoBehaviour
             PersRBController playerController = other.GetComponent<PersRBController>();
             if (playerController != null)
             {
-                playerController.Speed *= speedCoeff; // Замедляем скорость на 80% (оставляем 20% от исходной)
+                StartCoroutine(SlowDownPlayer(playerController));
             }
         }
         else if (other.CompareTag("Ship") || other.CompareTag("JetSki"))
         {
-            // Код для потопления и всплытия
-            StartCoroutine(SinkAndFloat(other.gameObject));
+            // Погружаем тину
+            StartCoroutine(SinkAndFloat());
         }
     }
 
-    private void OnTriggerExit(Collider other)
+    private IEnumerator SlowDownPlayer(PersRBController playerController)
     {
-        if (other.CompareTag("Player"))
-        {
-            // Восстанавливаем скорость игрока при выходе из тины
-            PersRBController playerController = other.GetComponent<PersRBController>();
-            if (playerController != null)
-            {
-                playerController.Speed /= speedCoeff; // Восстанавливаем скорость до исходной
-            }
-        }
+        float originalSpeed = playerController.Speed; // Сохраняем оригинальную скорость
+        playerController.Speed *= speedCoeff; // Замедляем скорость игрока
+
+        yield return new WaitForSeconds(3.0f); // Время замедления
+
+        playerController.Speed = originalSpeed; // Восстанавливаем скорость
     }
 
-    private IEnumerator SinkAndFloat(GameObject obj)
+    private IEnumerator SinkAndFloat()
     {
-        Vector3 originalPosition = obj.transform.position;
+        Vector3 originalPosition = transform.position;
         Vector3 sinkPosition = new Vector3(originalPosition.x, originalPosition.y - floatHeight, originalPosition.z);
 
         float elapsedTime = 0;
 
+        // Погружаем объект
         while (elapsedTime < sinkDuration)
         {
-            obj.transform.position = Vector3.Lerp(originalPosition, sinkPosition, (elapsedTime / sinkDuration));
+            transform.position = Vector3.Lerp(originalPosition, sinkPosition, (elapsedTime / sinkDuration));
             elapsedTime += Time.deltaTime;
             yield return null;
         }
 
-        yield return new WaitForSeconds(floatDelay);
+        yield return new WaitForSeconds(floatDelay); // Задержка перед всплытием
 
         elapsedTime = 0;
+        // Всплытие объекта
         while (elapsedTime < sinkDuration)
         {
-            //obj.transform.position = Vector3.Lerp(sinkPosition, originalPosition, (elapsedTime / sinkDuration));
+            transform.position = Vector3.Lerp(sinkPosition, originalPosition, (elapsedTime / sinkDuration));
             elapsedTime += Time.deltaTime;
             yield return null;
         }
 
-        obj.transform.position = originalPosition;
+        transform.position = originalPosition; // Возвращаем тину на исходное место
     }
 }
