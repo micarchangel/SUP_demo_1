@@ -14,9 +14,10 @@ GameObject:
   - component: {fileID: 5498950761402294838}
   - component: {fileID: 1107542645544656395}
   - component: {fileID: 8223972062661166198}
+  - component: {fileID: -4470546428590966295}
   m_Layer: 0
   m_Name: jetski
-  m_TagString: Untagged
+  m_TagString: JetSki
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -217,7 +218,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f480b9342507ea243a62036e023dada5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _damage: 1
+  _damage: 100
   _score: 0
 --- !u!114 &1107542645544656395
 MonoBehaviour:
@@ -245,8 +246,35 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 25
-  turnSpeed: 5
-  detectionDistance: 5
+  turnSpeed: 15
+  detectionDistanceShipEnemy: 20
+  detectionDistanceObstacle: 10
+  detectionDistancePlayer: 3
+  lowerRayOffset: 0.5
+  maxTurnAngle: 30
+--- !u!136 &-4470546428590966295
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 325474894406711743}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 60
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &281332316716224550
 PrefabInstance:
   m_ObjectHideFlags: 0
