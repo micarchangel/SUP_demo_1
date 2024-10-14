@@ -19,7 +19,7 @@ GameObject:
   - component: {fileID: 2702310245972490374}
   m_Layer: 0
   m_Name: WoodBox2
-  m_TagString: Untagged
+  m_TagString: Obstacles
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

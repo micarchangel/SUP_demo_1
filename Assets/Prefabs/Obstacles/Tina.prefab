@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 74486531451664094}
   m_Layer: 0
   m_Name: Tina
-  m_TagString: Untagged
+  m_TagString: Obstacles
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -147,3 +147,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d39002e2c8361d94997f7da10def9d11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speedCoeff: 0.2
+  sinkDuration: 4
+  floatHeight: 2
+  floatDelay: 2

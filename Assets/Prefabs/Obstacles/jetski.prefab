@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 8223972062661166198}
   m_Layer: 0
   m_Name: jetski
-  m_TagString: Untagged
+  m_TagString: JetSki
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -246,7 +246,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 25
   turnSpeed: 5
-  detectionDistance: 5
+  detectionDistanceShipEnemy: 30
+  detectionDistanceObstacles: 5
+  detectionDistancePlayer: 2
+  lowerRayOffset: 0.5
+  maxTurnAngle: 45
 --- !u!1001 &281332316716224550
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 5973766744420698367}
   - component: {fileID: 9132104300370328222}
   - component: {fileID: 4764427524962263231}
-  - component: {fileID: -7150952577578104840}
   - component: {fileID: -5815894776558859043}
   - component: {fileID: -6137918935456258800}
+  - component: {fileID: 3269248634976873947}
   m_Layer: 0
   m_Name: FisherBoat
   m_TagString: Ship
@@ -185,7 +185,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8153521103826457325}
   serializedVersion: 4
-  m_Mass: 10
+  m_Mass: 1000
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -204,19 +204,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 118
   m_CollisionDetection: 0
---- !u!114 &-7150952577578104840
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8153521103826457325}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02817f00b83e19648affafab254adab8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 10
 --- !u!114 &-5815894776558859043
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -244,6 +231,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _damage: 10
   _score: 0
+--- !u!114 &3269248634976873947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8153521103826457325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fffcbc8e162a3146a79f849f443f723, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 200
+  turnSpeed: 13
+  detectionDistance: 5
+  lowerDetectionHeight: 0.5
+  upperDetectionHeight: 1
+  lower2DetectionHeight: 0
+  upper2DetectionHeight: 1.5
+  lower3DetectionHeight: 2
+  upper3DetectionHeight: 0.3
 --- !u!1001 &57278183255182667
 PrefabInstance:
   m_ObjectHideFlags: 0
