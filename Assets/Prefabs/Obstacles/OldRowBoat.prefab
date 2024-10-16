@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 5267049204081945319}
   - component: {fileID: 4600689043205102538}
   - component: {fileID: -4480816120372348295}
+  - component: {fileID: 5489054831202458296}
   m_Layer: 0
   m_Name: OldRowBoat
   m_TagString: Ship
@@ -86,7 +87,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 84
   m_CollisionDetection: 0
 --- !u!65 &2298753672064011122
 BoxCollider:
@@ -239,7 +240,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5168838021309079330}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8ed99514bca4d774eba64d108921974d, type: 3}
   m_Name: 
@@ -247,6 +248,25 @@ MonoBehaviour:
   speed: 1
   turnSpeed: 2
   detectionDistance: 5
+--- !u!114 &5489054831202458296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5168838021309079330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 136286d2e76ed7640ad3855c42bef4d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  turnSpeed: 30
+  detectionDistanceShipEnemy: 10
+  detectionDistanceObstacles: 10
+  detectionDistancePlayer: 10
+  lowerRayOffset: 0.5
+  maxTurnAngle: 45
 --- !u!1001 &5872910811773256301
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -269,7 +289,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c8bb69d4021b4924c847a767f5631697, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c8bb69d4021b4924c847a767f5631697, type: 3}
       propertyPath: m_LocalPosition.z

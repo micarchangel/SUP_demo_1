@@ -21,7 +21,7 @@ public class FisherBoatAI : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        rb.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ; // Ограничиваем вращение по X и Z
+        //rb.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ; // Ограничиваем вращение по X и Z
     }
 
     void Update()

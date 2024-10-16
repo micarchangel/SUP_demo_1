@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
-public class FloatingBottle : MonoBehaviour
+public class Floater : MonoBehaviour
 {
     [SerializeField] private float floatingSpeed = 0.3f; // Скорость движения бутылки
     [SerializeField] private float rotationSpeed = 1f; // Скорость наклона бутылки

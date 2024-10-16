@@ -15,7 +15,10 @@ GameObject:
   - component: {fileID: 4764427524962263231}
   - component: {fileID: -5815894776558859043}
   - component: {fileID: -6137918935456258800}
+  - component: {fileID: 6601227222860110245}
   - component: {fileID: 3269248634976873947}
+  - component: {fileID: 8842797829133719644}
+  - component: {fileID: 3253175053382436061}
   m_Layer: 0
   m_Name: FisherBoat
   m_TagString: Ship
@@ -202,7 +205,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 118
+  m_Constraints: 84
   m_CollisionDetection: 0
 --- !u!114 &-5815894776558859043
 MonoBehaviour:
@@ -231,7 +234,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _damage: 10
   _score: 0
---- !u!114 &3269248634976873947
+--- !u!114 &6601227222860110245
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -240,18 +243,72 @@ MonoBehaviour:
   m_GameObject: {fileID: 8153521103826457325}
   m_Enabled: 1
   m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 136286d2e76ed7640ad3855c42bef4d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  turnSpeed: 30
+  detectionDistanceShipEnemy: 10
+  detectionDistanceObstacles: 10
+  detectionDistancePlayer: 10
+  lowerRayOffset: 0.5
+  maxTurnAngle: 45
+--- !u!114 &3269248634976873947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8153521103826457325}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8fffcbc8e162a3146a79f849f443f723, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 200
   turnSpeed: 13
-  detectionDistance: 5
+  detectionDistance: 20
   lowerDetectionHeight: 0.5
   upperDetectionHeight: 1
   lower2DetectionHeight: 0
   upper2DetectionHeight: 1.5
   lower3DetectionHeight: 2
   upper3DetectionHeight: 0.3
+--- !u!114 &8842797829133719644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8153521103826457325}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5252b3220402ed249a538be4cc053e79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  XYZ: {x: 0, y: 0, z: 0}
+--- !u!195 &3253175053382436061
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8153521103826457325}
+  m_Enabled: 0
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1001 &57278183255182667
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -266,7 +323,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 06296e7c4137dc345a9ac71bf7bfe2f9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 06296e7c4137dc345a9ac71bf7bfe2f9, type: 3}
       propertyPath: m_LocalPosition.z
