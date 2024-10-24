@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 7402460141437901661}
   - component: {fileID: 4400049724626590933}
   - component: {fileID: 2702310245972490374}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: WoodBox2
   m_TagString: Obstacles
   m_Icon: {fileID: 0}

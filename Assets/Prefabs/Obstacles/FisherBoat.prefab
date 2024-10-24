@@ -241,7 +241,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8153521103826457325}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 136286d2e76ed7640ad3855c42bef4d8, type: 3}
   m_Name: 
@@ -286,7 +286,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5252b3220402ed249a538be4cc053e79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  XYZ: {x: 0, y: 0, z: 0}
+  wayPoint: {fileID: 0}
 --- !u!195 &3253175053382436061
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -294,7 +294,7 @@ NavMeshAgent:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8153521103826457325}
-  m_Enabled: 0
+  m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
   m_Speed: 3.5
@@ -307,7 +307,7 @@ NavMeshAgent:
   m_AutoRepath: 1
   m_Height: 2
   m_BaseOffset: 0
-  m_WalkableMask: 4294967295
+  m_WalkableMask: 1
   m_ObstacleAvoidanceType: 4
 --- !u!1001 &57278183255182667
 PrefabInstance:
@@ -357,9 +357,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -723300809388065148, guid: 06296e7c4137dc345a9ac71bf7bfe2f9, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 06296e7c4137dc345a9ac71bf7bfe2f9, type: 3}
       propertyPath: m_Name
       value: fishing_boat
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 06296e7c4137dc345a9ac71bf7bfe2f9, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5662816640260987680, guid: 06296e7c4137dc345a9ac71bf7bfe2f9, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:

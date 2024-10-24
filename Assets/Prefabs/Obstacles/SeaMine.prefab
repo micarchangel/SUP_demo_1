@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 358755060412616772}
   - component: {fileID: 8095397052672669617}
   - component: {fileID: 542312992320899698}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: SeaMine
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -178,6 +178,14 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 303bb9e8ed0aaca45a66456c92ffd8e2, type: 3}
       propertyPath: m_Name
       value: SeaMine
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 303bb9e8ed0aaca45a66456c92ffd8e2, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8164078558771037576, guid: 303bb9e8ed0aaca45a66456c92ffd8e2, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: -5449563357975959407}
   - component: {fileID: 1946541573778991606}
   - component: {fileID: 8625273851030459042}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: WoodenBarrel
   m_TagString: Obstacles
   m_Icon: {fileID: 0}
@@ -173,6 +173,14 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 848c840c07b88b54ba622aced34f561d, type: 3}
       propertyPath: m_Name
       value: Wooden Barrel
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 848c840c07b88b54ba622aced34f561d, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8164078558771037576, guid: 848c840c07b88b54ba622aced34f561d, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

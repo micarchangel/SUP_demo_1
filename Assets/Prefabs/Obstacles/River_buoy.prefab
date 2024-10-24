@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4025104011613317778}
   - component: {fileID: 541515314548261743}
   - component: {fileID: 7730688290597579083}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: River_buoy
   m_TagString: Obstacles
   m_Icon: {fileID: 0}
@@ -165,6 +165,14 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 5e37a5f644ce84f4f8a750f312afdcdb, type: 3}
       propertyPath: m_Name
       value: River_buoy_OBJ
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5e37a5f644ce84f4f8a750f312afdcdb, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8164078558771037576, guid: 5e37a5f644ce84f4f8a750f312afdcdb, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

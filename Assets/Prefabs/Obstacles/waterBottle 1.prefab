@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3647890054926238409}
   - component: {fileID: 5489557920073955370}
   - component: {fileID: 3091720015241619494}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: waterBottle 1
   m_TagString: Obstacles
   m_Icon: {fileID: 0}
@@ -262,9 +262,37 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8364048076454799464, guid: e85bbf087d9c7744ab999a006ebb0882, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8344020408570368452, guid: e85bbf087d9c7744ab999a006ebb0882, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8157543334808585985, guid: e85bbf087d9c7744ab999a006ebb0882, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -6497594700887929638, guid: e85bbf087d9c7744ab999a006ebb0882, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -3925810142562792968, guid: e85bbf087d9c7744ab999a006ebb0882, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e85bbf087d9c7744ab999a006ebb0882, type: 3}
       propertyPath: m_Name
       value: waterBottle_FBX
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e85bbf087d9c7744ab999a006ebb0882, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3266361394784087195, guid: e85bbf087d9c7744ab999a006ebb0882, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

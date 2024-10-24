@@ -280,6 +280,10 @@ PrefabInstance:
       value: RowBoat
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: c8bb69d4021b4924c847a767f5631697, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: c8bb69d4021b4924c847a767f5631697, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 1
       objectReference: {fileID: 0}

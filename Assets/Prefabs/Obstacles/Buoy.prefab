@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3273245900839191193}
   - component: {fileID: -1611096728777913641}
   - component: {fileID: 3278015469346898385}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Buoy
   m_TagString: Obstacles
   m_Icon: {fileID: 0}
@@ -195,9 +195,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -4505043847908246337, guid: babfc9144d4e1694a8bd0591f615c0c9, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4292638907248692051, guid: babfc9144d4e1694a8bd0591f615c0c9, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: babfc9144d4e1694a8bd0591f615c0c9, type: 3}
       propertyPath: m_Name
       value: buoy
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: babfc9144d4e1694a8bd0591f615c0c9, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6701141943831335497, guid: babfc9144d4e1694a8bd0591f615c0c9, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6723009373726903532, guid: babfc9144d4e1694a8bd0591f615c0c9, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

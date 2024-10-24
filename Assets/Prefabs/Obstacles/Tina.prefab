@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4886423673686348751}
   - component: {fileID: 6994913743739577009}
   - component: {fileID: 74486531451664094}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Tina
   m_TagString: Obstacles
   m_Icon: {fileID: 0}

@@ -5,13 +5,14 @@ using UnityEngine.AI;
 
 public class NavAgent : MonoBehaviour
 {
-    [SerializeField] private Vector3 XYZ;
+    //[SerializeField] private Vector3 XYZ;
+    [SerializeField] private Transform wayPoint;
 
     private NavMeshAgent _agent;
 
     void Start()
     {
         _agent = GetComponent<NavMeshAgent>();
-        _agent.destination = XYZ;
+        _agent.SetDestination(wayPoint.position);
     }
 }

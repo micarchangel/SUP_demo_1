@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3783358585184110905}
   - component: {fileID: 7743713862438204211}
   - component: {fileID: 1889181929587728448}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: BoosterBottle
   m_TagString: Obstacles
   m_Icon: {fileID: 0}
@@ -182,6 +182,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -5568371526223589888, guid: 95676b62e86918147ad772ac09029247, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -1853094968961178454, guid: 95676b62e86918147ad772ac09029247, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -189,6 +193,14 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 95676b62e86918147ad772ac09029247, type: 3}
       propertyPath: m_Name
       value: bottle
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 95676b62e86918147ad772ac09029247, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8513859187771203891, guid: 95676b62e86918147ad772ac09029247, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:

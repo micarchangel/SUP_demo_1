@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1415495095036029427}
   - component: {fileID: 7758836755098547958}
   - component: {fileID: 306041405375993804}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Money_Sack
   m_TagString: Obstacles
   m_Icon: {fileID: 0}
@@ -169,18 +169,34 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: -6818535739653823447, guid: 5a0e49f9133627444ba159b387a3f2a1, type: 3}
+    - target: {fileID: -2042813176107593532, guid: cbecfa8e6cfa7344ba116ae55a4da955, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: cbecfa8e6cfa7344ba116ae55a4da955, type: 3}
       propertyPath: m_Name
       value: Money_Sack_B_smoothed
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cbecfa8e6cfa7344ba116ae55a4da955, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4149291711120374042, guid: cbecfa8e6cfa7344ba116ae55a4da955, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: -6818535739653823447, guid: e289b95f50b7b6c46939bf13ba63d986, type: 3}
+    - target: {fileID: 7830497584715749931, guid: cbecfa8e6cfa7344ba116ae55a4da955, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8401985219583758041, guid: cbecfa8e6cfa7344ba116ae55a4da955, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: -6818535739653823447, guid: fbdad89a49846b649a04058ec66f6a39, type: 3}
+    - target: {fileID: 8450667375550583865, guid: cbecfa8e6cfa7344ba116ae55a4da955, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

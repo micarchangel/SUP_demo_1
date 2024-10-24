@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1326168023848492535}
   - component: {fileID: 1197635429313035305}
   - component: {fileID: 8581776325887308840}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: cola_can
   m_TagString: Obstacles
   m_Icon: {fileID: 0}
@@ -165,9 +165,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -4141140816117889057, guid: 1c52fcfc3aea3844294035ad76f0231b, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 1c52fcfc3aea3844294035ad76f0231b, type: 3}
       propertyPath: m_Name
       value: cola_can
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1c52fcfc3aea3844294035ad76f0231b, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7115457442676506160, guid: 1c52fcfc3aea3844294035ad76f0231b, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8874052115483341942, guid: 1c52fcfc3aea3844294035ad76f0231b, type: 3}
       propertyPath: m_Materials.Array.data[0]
