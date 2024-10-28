@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 358755060412616772}
   - component: {fileID: 8095397052672669617}
   - component: {fileID: 542312992320899698}
+  - component: {fileID: 8966159808706331670}
   m_Layer: 3
   m_Name: SeaMine
   m_TagString: Enemy
@@ -111,6 +112,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _damage: 100
   _score: 0
+--- !u!208 &8966159808706331670
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1451135981601902316}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 0
+  m_Extents: {x: 2.5, y: 1, z: 2.5}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1001 &2869170675714635819
 PrefabInstance:
   m_ObjectHideFlags: 0

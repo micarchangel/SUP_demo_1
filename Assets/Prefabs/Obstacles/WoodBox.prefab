@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 1079946240241490506}
   - component: {fileID: -7075527833382851063}
   - component: {fileID: -6338804154180003474}
+  - component: {fileID: -6134141587927045676}
   m_Layer: 3
   m_Name: WoodBox
   m_TagString: Obstacles
@@ -200,3 +201,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sinkDuration: 10
   floatHeight: 2
+--- !u!208 &-6134141587927045676
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9183612672558672978}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
