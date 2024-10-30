@@ -6,12 +6,12 @@ using UnityEngine;
 public class NavMeshBaking : MonoBehaviour
 {
     NavMeshSurface surface;
-    [SerializeField] private float delay = 1;
+    [SerializeField] private float delay = 0;
 
     void Start()
     {
         surface = GetComponent<NavMeshSurface>();
-        Invoke("Bake", delay);  
+        Invoke(nameof(Bake), delay);  
     }
 
     private void Bake()

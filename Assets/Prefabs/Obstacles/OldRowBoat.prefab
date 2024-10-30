@@ -12,11 +12,12 @@ GameObject:
   - component: {fileID: 8017070008669243511}
   - component: {fileID: 1047919326915232112}
   - component: {fileID: 2298753672064011122}
+  - component: {fileID: 4600689043205102538}
   - component: {fileID: 6740510365254248634}
   - component: {fileID: 5267049204081945319}
-  - component: {fileID: 4600689043205102538}
   - component: {fileID: -4480816120372348295}
   - component: {fileID: 5489054831202458296}
+  - component: {fileID: -7736412234510360350}
   - component: {fileID: 7357834209512922428}
   - component: {fileID: -3548267133756041057}
   m_Layer: 0
@@ -112,33 +113,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.53, y: 1.8562832, z: 6.046004}
   m_Center: {x: 0, y: 0.85661125, z: 0.29355884}
---- !u!114 &6740510365254248634
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5168838021309079330}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27a457a1250df394dae22b5b198dc38a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  destroyDistanceBehind: 20
---- !u!114 &5267049204081945319
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5168838021309079330}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f480b9342507ea243a62036e023dada5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _damage: 50
-  _score: 0
 --- !u!82 &4600689043205102538
 AudioSource:
   m_ObjectHideFlags: 0
@@ -235,6 +209,33 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &6740510365254248634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5168838021309079330}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27a457a1250df394dae22b5b198dc38a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyDistanceBehind: 20
+--- !u!114 &5267049204081945319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5168838021309079330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f480b9342507ea243a62036e023dada5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _damage: 50
+  _score: 0
 --- !u!114 &-4480816120372348295
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -269,6 +270,18 @@ MonoBehaviour:
   detectionDistancePlayer: 10
   lowerRayOffset: 0.5
   maxTurnAngle: 45
+--- !u!114 &-7736412234510360350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5168838021309079330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d47a5f272284dc438af3b035d492e8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &7357834209512922428
 MonoBehaviour:
   m_ObjectHideFlags: 0

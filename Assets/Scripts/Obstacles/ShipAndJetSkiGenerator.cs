@@ -13,7 +13,7 @@ public class ShipAndJetSkiGenerator : MonoBehaviour
     [SerializeField] private float waterLengthStart = 28.93f; // Начальная позиция по Z
     [SerializeField] private float waterLengthEnd = -750.0f; // Конечная позиция по Z
     [SerializeField] private float waterPosX = 0.0f; // Позиция центра реки по X 
-    [SerializeField] private float destroyDistanceBehind = 20.0f; // Расстояние позади игрока, после которого лодки уничтожаются
+    //[SerializeField] private float destroyDistanceBehind = 20.0f; // Расстояние позади игрока, после которого лодки уничтожаются
 
     void Start()
     {
@@ -45,9 +45,6 @@ public class ShipAndJetSkiGenerator : MonoBehaviour
             );
 
             GameObject newShip = Instantiate(selectedObject, randomPosition, Quaternion.identity, transform);
-            var destroyer = newShip.AddComponent<ObjectDestroyer>();
-            destroyer.player = player;
-            destroyer.destroyDistanceBehind = destroyDistanceBehind;
         }
     }
 }

@@ -10,6 +10,7 @@ TagManager:
   - JetSki
   - Obstacles
   - WayPoint
+  - Destroyer
   layers:
   - Default
   - TransparentFX

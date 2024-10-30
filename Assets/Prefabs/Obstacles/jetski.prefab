@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5498950761402294838}
   - component: {fileID: 1107542645544656395}
   - component: {fileID: 8223972062661166198}
+  - component: {fileID: 9066534652616545917}
   - component: {fileID: 5904686452222336644}
   - component: {fileID: 7862004342768686278}
   m_Layer: 0
@@ -228,7 +229,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 325474894406711743}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 27a457a1250df394dae22b5b198dc38a, type: 3}
   m_Name: 
@@ -253,6 +254,18 @@ MonoBehaviour:
   detectionDistancePlayer: 2
   lowerRayOffset: 0.5
   maxTurnAngle: 45
+--- !u!114 &9066534652616545917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 325474894406711743}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d47a5f272284dc438af3b035d492e8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &5904686452222336644
 MonoBehaviour:
   m_ObjectHideFlags: 0

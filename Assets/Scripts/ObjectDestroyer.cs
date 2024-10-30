@@ -4,15 +4,12 @@ using UnityEngine;
 
 public class ObjectDestroyer : MonoBehaviour
 {
-    public Transform player;
-    public float destroyDistanceBehind = 20.0f;
-
-    void Update()
+    private void OnTriggerEnter(Collider other)
     {
-        if (player != null && transform.position.z > transform.position.z + destroyDistanceBehind)
+        if (other.gameObject.CompareTag("Destroyer"))
         {
-            //Debug.Log($"Объект уничтожен.");
             Destroy(gameObject);
+            Debug.Log($"{gameObject.name} Destroyed");
         }
     }
 }
