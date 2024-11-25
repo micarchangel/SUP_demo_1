@@ -1757,7 +1757,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 2.5
-  m_Speed: 13
+  m_Speed: 16
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -1778,7 +1778,7 @@ Transform:
   m_GameObject: {fileID: 568008102}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 8, y: 13, z: 28}
+  m_LocalPosition: {x: 10.88, y: 13, z: 28}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2769,7 +2769,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1039911628}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6ea40d2254424664e996de53fa3afaef, type: 3}
   m_Name: 
@@ -4905,11 +4905,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3351170355449695374, guid: 52e57cbb38632dc48b71ce5116f14095, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3351170355449695374, guid: 52e57cbb38632dc48b71ce5116f14095, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3351170355449695374, guid: 52e57cbb38632dc48b71ce5116f14095, type: 3}
       propertyPath: m_LocalRotation.y
@@ -4917,7 +4917,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3351170355449695374, guid: 52e57cbb38632dc48b71ce5116f14095, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3351170355449695374, guid: 52e57cbb38632dc48b71ce5116f14095, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -4939,6 +4939,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Bot
       objectReference: {fileID: 0}
+    - target: {fileID: 5324660588273964572, guid: 52e57cbb38632dc48b71ce5116f14095, type: 3}
+      propertyPath: m_Constraints
+      value: 122
+      objectReference: {fileID: 0}
     - target: {fileID: 5712744299298620688, guid: 52e57cbb38632dc48b71ce5116f14095, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -4954,6 +4958,7 @@ PrefabInstance:
     - {fileID: 941785717305417324, guid: 52e57cbb38632dc48b71ce5116f14095, type: 3}
     - {fileID: 8702381153095528078, guid: 52e57cbb38632dc48b71ce5116f14095, type: 3}
     - {fileID: 7429229482932231755, guid: 52e57cbb38632dc48b71ce5116f14095, type: 3}
+    - {fileID: 1644317829231584333, guid: 52e57cbb38632dc48b71ce5116f14095, type: 3}
     m_RemovedGameObjects:
     - {fileID: 7258674064925780871, guid: 52e57cbb38632dc48b71ce5116f14095, type: 3}
     - {fileID: 2085438198451717764, guid: 52e57cbb38632dc48b71ce5116f14095, type: 3}
