@@ -11,6 +11,8 @@ TagManager:
   - Obstacles
   - WayPoint
   - Destroyer
+  - Bot
+  - FinishPoint
   layers:
   - Default
   - TransparentFX

@@ -21,6 +21,8 @@ public class PlayerAnimation : MonoBehaviour
         h = Input.GetAxis("Horizontal");
         v = Input.GetAxis("Vertical");
 
+        //Debug.Log($"{h} {v}");
+
         animator.SetFloat("verticalMove", v);
         animator.SetFloat("horizontalMove", h);
 
