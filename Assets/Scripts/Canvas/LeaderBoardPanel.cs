@@ -3,24 +3,31 @@ using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Jobs;
 using UnityEngine.UI;
+using static UnityEditor.Timeline.TimelinePlaybackControls;
 
 public class LeaderBoardPanel : MonoBehaviour
 {
     [SerializeField] private float templateHeight = 50f; // Высота строки
     //[SerializeField] private int leadersCount = 20; // Количество записей
 
-    private Transform _viewport; // Родительский объект
-    private Transform _content; // Дочерний объект
+    
+    [SerializeField] private Transform _content; // Родительский объект
+    [SerializeField] private Transform _row; // Дочерний объект
+
     //private List<HighScoreEntry> _highScoreEntryList;
     private List<Transform> _highScoreEntryTransformList; // Записи таблицы
-   
+    private int _countOfChilds;
+
+
     private void Awake()
     {
-        _viewport = transform.Find("Viewport");
-        _content = _viewport.Find("Content");
+        //_content = transform.Find("Viewport");
+        //_row = _content.Find("Content");
 
-        _content.gameObject.SetActive(false);
+        _countOfChilds = _content.childCount;
+        _row.gameObject.SetActive(false);
 
         //PlayerPrefs.DeleteKey("highScoreTable");
 
@@ -42,6 +49,14 @@ public class LeaderBoardPanel : MonoBehaviour
         string jsonString = PlayerPrefs.GetString("highScoreTable");
         Highscores highscores = JsonUtility.FromJson<Highscores>(jsonString);
 
+        // Удаляем созданные строки, чтобы не дублировалось
+        while (_content.childCount > _countOfChilds)
+        {
+            Transform child = _content.Find("Row(Clone)");
+            //Debug.Log($"Объект {child.name} удален");
+            DestroyImmediate(child.gameObject);
+        }
+
         // Сортировка
         IEnumerable<HighScoreEntry> orderedScoreList;
         orderedScoreList = highscores.highscoreEntryList.OrderByDescending(x => x.score).ThenBy(x => x.time);
@@ -49,14 +64,14 @@ public class LeaderBoardPanel : MonoBehaviour
         // Заполняем таблицу
         _highScoreEntryTransformList = new List<Transform>();
         foreach (HighScoreEntry highScoreEntry in orderedScoreList)
-            CreateHighScoreEntryTransform(highScoreEntry, _viewport, _highScoreEntryTransformList);
+            CreateHighScoreEntryTransform(highScoreEntry, _content, _highScoreEntryTransformList);
     }
 
     // Отрисовка и заполнение строки таблицы
     private void CreateHighScoreEntryTransform(HighScoreEntry highScore, Transform container, List<Transform> transformList)
     {
         // Рисуем таблицу
-        Transform entryTransform = Instantiate(_content, container);
+        Transform entryTransform = Instantiate(_row, container);
         RectTransform entryRectTransform = entryTransform.GetComponent<RectTransform>();
         entryRectTransform.anchoredPosition = new Vector2(0, -templateHeight * transformList.Count);
         entryTransform.gameObject.SetActive(true);

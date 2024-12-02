@@ -10,10 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 6082734563002931802}
   - component: {fileID: 1552329795656475094}
+  - component: {fileID: 5585926343652543297}
   m_Layer: 0
   m_Name: ShipGenerationPoint
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_TagString: Ship
+  m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -39,11 +40,36 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8503697932556386542}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ea4245ed85f9d9b4c95a0e531716cc2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   shipsToGenerate:
-  - {fileID: 0}
+  - {fileID: 8153521103826457325, guid: aca086c98904b4b42a5895243300e09a, type: 3}
+  - {fileID: 5168838021309079330, guid: eef42bf1d1c854748b91e8138187bb30, type: 3}
   spawnInterval: 5
+--- !u!114 &5585926343652543297
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8503697932556386542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a2663be81cb5f643b8430334a014d9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 3351170355449695374, guid: 52e57cbb38632dc48b71ce5116f14095, type: 3}
+  shipsAndJetSkis:
+  - {fileID: 8153521103826457325, guid: aca086c98904b4b42a5895243300e09a, type: 3}
+  - {fileID: 5168838021309079330, guid: eef42bf1d1c854748b91e8138187bb30, type: 3}
+  - {fileID: 325474894406711743, guid: 3ced2af95351109438c8ed60366941ce, type: 3}
+  heigth: 13.3
+  spawnInterval: 5
+  waterWidth: 30
+  waterLengthStart: 28.93
+  waterLengthEnd: -750
+  waterPosX: 0
+  destroyDistanceBehind: 20

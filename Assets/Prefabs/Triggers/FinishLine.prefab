@@ -100,7 +100,7 @@ MonoBehaviour:
   End:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 3233425697931496772, guid: 52e57cbb38632dc48b71ce5116f14095, type: 3}
         m_TargetAssemblyTypeName: EndGame, Assembly-CSharp
         m_MethodName: GameComplete
         m_Mode: 1

@@ -8,11 +8,16 @@ TagManager:
   - Ship
   - Enemy
   - JetSki
+  - Obstacles
+  - WayPoint
+  - Destroyer
+  - Bot
+  - FinishPoint
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Obstacles
   - Water
   - UI
   - 

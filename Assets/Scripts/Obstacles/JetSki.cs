@@ -30,7 +30,7 @@ public class JetSki : MonoBehaviour
 
 
         // Двигаем гидроцикл в текущем направлении
-        transform.Translate(-direction * speed * Time.deltaTime);
+        transform.Translate(direction * speed * Time.deltaTime);
     }
 
     //private void OnDestroy()

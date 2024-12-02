@@ -20,7 +20,7 @@ public class ObjectGenerator : MonoBehaviour
             GameObject selectedObject = objectsToGenerate[randomIndex];
 
             // Создаем выбранный объект в позиции `GenerationPoint`
-            Instantiate(selectedObject, transform.position, transform.rotation);
+            Instantiate(selectedObject, transform.position, transform.rotation, transform);
         }
     }
 }
