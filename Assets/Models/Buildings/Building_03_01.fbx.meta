@@ -12,6 +12,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: belt.001
+    second: {fileID: 2100000, guid: 22ee8c353d6d3294d9f201f25261d842, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: dark_metall
     second: {fileID: 2100000, guid: 6066487a837c02247a2334c7ad05d400, type: 2}
   - first:
