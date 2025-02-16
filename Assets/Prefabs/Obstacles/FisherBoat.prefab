@@ -233,7 +233,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f480b9342507ea243a62036e023dada5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _damage: 10
+  _damage: 50
   _score: 0
 --- !u!114 &6601227222860110245
 MonoBehaviour:

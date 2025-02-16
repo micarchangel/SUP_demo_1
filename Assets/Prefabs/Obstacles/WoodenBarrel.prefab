@@ -196,6 +196,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8164078558771037576, guid: 848c840c07b88b54ba622aced34f561d, type: 3}
+      propertyPath: m_Name
+      value: Wooden Barrel
+      objectReference: {fileID: 0}
+    - target: {fileID: 8164078558771037576, guid: 848c840c07b88b54ba622aced34f561d, type: 3}
       propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}

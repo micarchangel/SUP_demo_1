@@ -162,6 +162,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -7635826562936255635, guid: 5e37a5f644ce84f4f8a750f312afdcdb, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 234471cef3fedc44fbd8f05d1b2cebb3, type: 2}
     - target: {fileID: 919132149155446097, guid: 5e37a5f644ce84f4f8a750f312afdcdb, type: 3}
       propertyPath: m_Name
       value: River_buoy_OBJ

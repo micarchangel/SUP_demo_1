@@ -263,21 +263,41 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8364048076454799464, guid: e85bbf087d9c7744ab999a006ebb0882, type: 3}
+      propertyPath: m_Name
+      value: BodyBottle
+      objectReference: {fileID: 0}
+    - target: {fileID: -8364048076454799464, guid: e85bbf087d9c7744ab999a006ebb0882, type: 3}
       propertyPath: m_Layer
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8344020408570368452, guid: e85bbf087d9c7744ab999a006ebb0882, type: 3}
+      propertyPath: m_Name
+      value: CapBottle
       objectReference: {fileID: 0}
     - target: {fileID: -8344020408570368452, guid: e85bbf087d9c7744ab999a006ebb0882, type: 3}
       propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8157543334808585985, guid: e85bbf087d9c7744ab999a006ebb0882, type: 3}
+      propertyPath: m_Name
+      value: BodyBottle1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8157543334808585985, guid: e85bbf087d9c7744ab999a006ebb0882, type: 3}
       propertyPath: m_Layer
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -6497594700887929638, guid: e85bbf087d9c7744ab999a006ebb0882, type: 3}
+      propertyPath: m_Name
+      value: CapBottle2
       objectReference: {fileID: 0}
     - target: {fileID: -6497594700887929638, guid: e85bbf087d9c7744ab999a006ebb0882, type: 3}
       propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -4675702099525329225, guid: e85bbf087d9c7744ab999a006ebb0882, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a9c058c8f779ad84dba6a964e6ee34a1, type: 2}
     - target: {fileID: -3925810142562792968, guid: e85bbf087d9c7744ab999a006ebb0882, type: 3}
       propertyPath: m_Layer
       value: 0
@@ -291,9 +311,29 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3266361394784087195, guid: e85bbf087d9c7744ab999a006ebb0882, type: 3}
+      propertyPath: m_Name
+      value: CapBottle1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3266361394784087195, guid: e85bbf087d9c7744ab999a006ebb0882, type: 3}
       propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3578863707185649718, guid: e85bbf087d9c7744ab999a006ebb0882, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a9c058c8f779ad84dba6a964e6ee34a1, type: 2}
+    - target: {fileID: 4081792477861165730, guid: e85bbf087d9c7744ab999a006ebb0882, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 70b3617b9de31094b90a6f39b0a6df8f, type: 2}
+    - target: {fileID: 4954621052988138625, guid: e85bbf087d9c7744ab999a006ebb0882, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 70b3617b9de31094b90a6f39b0a6df8f, type: 2}
+    - target: {fileID: 6493288676790449642, guid: e85bbf087d9c7744ab999a006ebb0882, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a9c058c8f779ad84dba6a964e6ee34a1, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

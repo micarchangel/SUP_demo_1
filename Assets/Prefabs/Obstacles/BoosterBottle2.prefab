@@ -190,6 +190,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8164078558771037576, guid: 99a642bbaa5f6e042b86ecbdc48a327e, type: 3}
+      propertyPath: m_Name
+      value: BodyBottle
+      objectReference: {fileID: 0}
+    - target: {fileID: 8164078558771037576, guid: 99a642bbaa5f6e042b86ecbdc48a327e, type: 3}
       propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
