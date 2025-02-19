@@ -96,7 +96,9 @@ public class ObjectGenerator : MonoBehaviour
         {
             capColor = softColors[Random.Range(0, softColors.Count)];
         }
-        while (capColor == bodyColor);
+        while ((capColor.r <= bodyColor.r - 0.2f || capColor.r >= bodyColor.r + 0.2f) &&
+               (capColor.g <= bodyColor.g - 0.2f || capColor.g >= bodyColor.g + 0.2f) &&
+               (capColor.b <= bodyColor.b - 0.2f || capColor.b >= bodyColor.b + 0.2f));
 
         Renderer[] renderers = obj.GetComponentsInChildren<Renderer>();
         foreach (Renderer rend in renderers)

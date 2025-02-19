@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class ShipAndJetSkiGenerator : MonoBehaviour
 {
-    [SerializeField] private Transform player;
     [SerializeField] private GameObject[] shipsAndJetSkis; // Массив префабов кораблей и гидроциклов
 
     [SerializeField] private float spawnInterval = 5.0f;     // Интервал между генерацией
