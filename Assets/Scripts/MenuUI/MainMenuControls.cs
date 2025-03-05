@@ -15,6 +15,12 @@ public class MainMenuControls : MonoBehaviour
         chooseCharacterMenu.SetActive(true);
     }
 
+    public void StartPressed()
+    {
+        SceneManager.LoadScene("1stLevel");
+        Time.timeScale = 1f;
+    }
+
     public void BackPressed()
     {
         mainMenu.SetActive(true);
