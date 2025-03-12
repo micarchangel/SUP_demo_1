@@ -1,10 +1,10 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ChooseHero : MonoBehaviour
+public class ModelSelector : MonoBehaviour
 {
-    public GameObject[] characterModels;
-    public Button[] characterButtons;
+    public GameObject[] models;
+    public Button[] buttons;
 
     private int selectedCharacterIndex = 0;
 
@@ -12,10 +12,10 @@ public class ChooseHero : MonoBehaviour
     {
         UpdateCharacterDisplay();
 
-        for (int i = 0; i < characterButtons.Length; i++)
+        for (int i = 0; i < buttons.Length; i++)
         {
             int index = i;
-            characterButtons[i].onClick.AddListener(() => OnCharacterButtonClick(index));
+            buttons[i].onClick.AddListener(() => OnCharacterButtonClick(index));
         }
     }
 
@@ -27,11 +27,11 @@ public class ChooseHero : MonoBehaviour
 
     void UpdateCharacterDisplay()
     {
-        foreach (GameObject model in characterModels)
+        foreach (GameObject model in models)
         {
             model.SetActive(false);
         }
-        characterModels[selectedCharacterIndex].SetActive(true);
+        models[selectedCharacterIndex].SetActive(true);
     }
 
 }
