@@ -7,6 +7,10 @@ public class MainMenuControls : MonoBehaviour
 {
     [SerializeField] private GameObject mainMenu;
     [SerializeField] private GameObject chooseCharacterMenu;
+    private void Start()
+    {
+        chooseCharacterMenu.SetActive(false);
+    }
     public void PlayPressed()
     {
         //SceneManager.LoadScene("1stLevel");

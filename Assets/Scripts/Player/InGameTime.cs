@@ -1,4 +1,4 @@
-using System.Collections;
+Ôªøusing System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -20,7 +20,7 @@ public class InGameTime : MonoBehaviour
     void Update()
     {
         _timer += Time.deltaTime;
-        timerText?.Invoke("¬ÂÏˇ: " + Mathf.Floor(_timer).ToString());
+        timerText?.Invoke("–í—Ä–µ–º—è: " + Mathf.Floor(_timer).ToString());
     }
 
     private void Init()

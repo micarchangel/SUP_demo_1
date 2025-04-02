@@ -1,4 +1,4 @@
-using System;
+ï»¿using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -18,7 +18,7 @@ public class Score : MonoBehaviour
         {
             _currentScore = value;
             scoreChanged?.Invoke(_currentScore);
-            scoreChangedString?.Invoke("Ñ÷åò: " + _currentScore.ToString());
+            scoreChangedString?.Invoke("Ð¡Ñ‡Ñ‘Ñ‚: " + _currentScore.ToString());
             Debug.Log("Score added");
         }
     }

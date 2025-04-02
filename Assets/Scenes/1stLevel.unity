@@ -6173,6 +6173,18 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -15.000122
       objectReference: {fileID: 0}
+    - target: {fileID: 5609504806401909381, guid: 3b7b331ace24140419f8c9663f559ca4, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 1c15e8923f1b8bb468b130945b4afe36, type: 2}
+    - target: {fileID: 5609504806401909381, guid: 3b7b331ace24140419f8c9663f559ca4, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -5300223250449446244, guid: 1c15e8923f1b8bb468b130945b4afe36, type: 2}
+    - target: {fileID: 5609504806401909381, guid: 3b7b331ace24140419f8c9663f559ca4, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5633560696856454143, guid: 3b7b331ace24140419f8c9663f559ca4, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -6257,6 +6269,18 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1332122187}
+    - target: {fileID: 8783216158330777265, guid: 3b7b331ace24140419f8c9663f559ca4, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 1c15e8923f1b8bb468b130945b4afe36, type: 2}
+    - target: {fileID: 8783216158330777265, guid: 3b7b331ace24140419f8c9663f559ca4, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -5300223250449446244, guid: 1c15e8923f1b8bb468b130945b4afe36, type: 2}
+    - target: {fileID: 8783216158330777265, guid: 3b7b331ace24140419f8c9663f559ca4, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 6815055025510428110, guid: 3b7b331ace24140419f8c9663f559ca4, type: 3}
