@@ -11,6 +11,8 @@ public class ShipAndJetSkiGenerator : MonoBehaviour
     [SerializeField] private float waterLengthStart = 28.93f;  // Начальная позиция по Z
     [SerializeField] private float waterLengthEnd = -750.0f;   // Конечная позиция по Z
     [SerializeField] private float waterPosX = 0.0f;           // Позиция центра реки по X
+    [SerializeField] private int maxTeplohodCount = 3; // Лимит теплоходов
+private int currentTeplohodCount = 0;
 
     void Start()
     {
@@ -32,6 +34,13 @@ public class ShipAndJetSkiGenerator : MonoBehaviour
         {
             int randomIndex = Random.Range(0, shipsAndJetSkis.Length);
             GameObject selectedObject = shipsAndJetSkis[randomIndex];
+           
+            bool isTeplohod = selectedObject.name.ToLower().Contains("teplohod");
+
+             if (isTeplohod && currentTeplohodCount >= maxTeplohodCount)
+             {
+                return; // Пропускаем создание, если достигнут лимит
+             }
 
             Vector3 randomPosition = new Vector3(
                 Random.Range(waterPosX - waterWidth / 2, waterPosX + waterWidth / 2), // X – в пределах реки
@@ -40,7 +49,11 @@ public class ShipAndJetSkiGenerator : MonoBehaviour
             );
 
             GameObject newShip = Instantiate(selectedObject, randomPosition, Quaternion.identity, transform);
-
+            
+            if (isTeplohod)
+            {
+                currentTeplohodCount++;
+            }
             // Применяем раскраску в зависимости от типа объекта
             ApplyShipColor(newShip);
         }

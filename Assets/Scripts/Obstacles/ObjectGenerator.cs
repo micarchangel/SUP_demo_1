@@ -9,7 +9,7 @@ public class ObjectGenerator : MonoBehaviour
     // Список объектов-бутылок
     private List<string> bottleObjects = new List<string>
     {
-        "BoosterBottle", "BoosterBottle2", "waterBottle 1"
+        "BoosterBottle", "Plastic Water Bottle Full", "waterBottle 1"
     };
 
     // Список деревянных объектов
@@ -86,35 +86,75 @@ public class ObjectGenerator : MonoBehaviour
         }
     }
 
-    void ApplyBottleColor(GameObject obj)
-    {
-        // Выбираем случайный цвет для корпуса бутылки
-        Color bodyColor = softColors[Random.Range(0, softColors.Count)];
-        // Выбираем цвет для крышки, не совпадающий с телом
-        Color capColor;
-        do
-        {
-            capColor = softColors[Random.Range(0, softColors.Count)];
-        }
-        while ((capColor.r <= bodyColor.r - 0.2f || capColor.r >= bodyColor.r + 0.2f) &&
-               (capColor.g <= bodyColor.g - 0.2f || capColor.g >= bodyColor.g + 0.2f) &&
-               (capColor.b <= bodyColor.b - 0.2f || capColor.b >= bodyColor.b + 0.2f));
+void ApplyBottleColor(GameObject obj)
+{
+    // Определяем имя без (Clone)
+    string objName = obj.name.Replace("(Clone)", "").Trim();
 
+    // Случайные цвета из пастельной палитры
+    Color color1 = softColors[Random.Range(0, softColors.Count)];
+    Color color2;
+    do
+    {
+        color2 = softColors[Random.Range(0, softColors.Count)];
+    }
+    while (Mathf.Abs(color1.r - color2.r) < 0.2f &&
+           Mathf.Abs(color1.g - color2.g) < 0.2f &&
+           Mathf.Abs(color1.b - color2.b) < 0.2f);
+
+    if (objName == "Plastic Water Bottle Full")
+    {
+        // Меняем цвет жидкости и крышки
+        Transform bottle = obj.transform.Find("PlasticBottle");
+        if (bottle != null)
+        {
+            Renderer rend = bottle.GetComponent<Renderer>();
+            if (rend != null)
+            {
+                foreach (Material mat in rend.materials)
+                {
+                    if (mat.name.Contains("WaterBottle"))
+                    {
+                        mat.color = color1;
+                    }
+                }
+            }
+        }
+
+        Transform cap = obj.transform.Find("BottleCap");
+        if (cap != null)
+        {
+            Renderer capRend = cap.GetComponent<Renderer>();
+            if (capRend != null)
+            {
+                capRend.material.color = color2;
+            }
+        }
+    }
+    else
+    {
+        // Это обычные BoosterBottle / waterBottle 1
         Renderer[] renderers = obj.GetComponentsInChildren<Renderer>();
         foreach (Renderer rend in renderers)
         {
             string meshName = rend.gameObject.name.ToLower();
             if (meshName.Contains("capbottle"))
             {
-                rend.material.color = capColor;
+                rend.material.color = color2;
             }
             else if (meshName.Contains("bodybottle"))
             {
-                rend.material.color = bodyColor;
+                rend.material.color = color1;
             }
-            Debug.Log($"[DEBUG] Bottle renderer found: {rend.gameObject.name}", rend.gameObject);
         }
     }
+}
+bool ColorsAreTooSimilar(Color a, Color b)
+{
+    return Mathf.Abs(a.r - b.r) < 0.2f &&
+           Mathf.Abs(a.g - b.g) < 0.2f &&
+           Mathf.Abs(a.b - b.b) < 0.2f;
+}
 
     void ApplyWoodColor(GameObject obj)
     {
